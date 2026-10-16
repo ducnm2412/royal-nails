@@ -7,12 +7,12 @@ export function Ritual() {
       <div className="wrap">
         <div className="ph" data-reveal data-parallax>
           <Image
-            src="/images/gallery/nail-04.jpg"
-            alt="Hand with pink floral stiletto nails and gold rings"
+            src="/images/gallery/mani-09.jpg"
+            alt="Cherry blossom nail art held against a blooming branch"
             fill
             quality={90}
             sizes="(max-width: 860px) 100vw, 520px"
-            data-lightbox="/images/gallery/nail-04.jpg"
+            data-lightbox="/images/gallery/mani-09.jpg"
             data-caption="Hand-sculpted at Royal"
           />
           <span className="badge">Hand-sculpted at Royal</span>

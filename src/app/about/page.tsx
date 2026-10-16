@@ -31,21 +31,21 @@ export default function AboutPage() {
               <div className="collage" data-reveal>
                 <figure className="c-neon">
                   <Image
-                    src="/images/brand/neon-sign.jpg"
+                    src="/images/brand/logo-lotus.png"
                     alt="Royal Nails & Spa neon sign with pink lotus"
-                    width={1200}
-                    height={800}
+                    width={1536}
+                    height={1024}
                     quality={90}
                     sizes="(max-width: 860px) 100vw, 520px"
-                    data-lightbox="/images/brand/neon-sign.jpg"
+                    data-lightbox="/images/brand/logo-lotus.png"
                     data-caption="The Royal neon sign"
                   />
                 </figure>
                 <figure className="c-a">
-                  <Image src="/images/gallery/nail-06.jpg" alt="Iridescent pink nails with red hearts" width={1600} height={1600} quality={90} sizes="240px" data-lightbox="/images/gallery/nail-06.jpg" />
+                  <Image src="/images/gallery/mani-06.jpg" alt="Rose pink nails with cream daisies" width={736} height={1104} quality={90} sizes="240px" data-lightbox="/images/gallery/mani-06.jpg" />
                 </figure>
                 <figure className="c-b">
-                  <Image src="/images/gallery/nail-10.jpg" alt="Black French tip almond nails" width={1344} height={1728} quality={90} sizes="240px" data-lightbox="/images/gallery/nail-10.jpg" />
+                  <Image src="/images/gallery/mani-02.jpg" alt="Sheer French tips with white dots" width={736} height={960} quality={90} sizes="240px" data-lightbox="/images/gallery/mani-02.jpg" />
                 </figure>
                 <span className="c-badge">Est. Ventura</span>
               </div>

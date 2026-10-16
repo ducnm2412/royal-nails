@@ -49,7 +49,7 @@ export const localBusinessJsonLd = {
   url: site.url,
   telephone: site.phoneHref.replace('tel:', ''),
   email: site.email,
-  image: `${site.url}/images/brand/neon-sign.jpg`,
+  image: `${site.url}/images/brand/logo-lotus.png`,
   logo: `${site.url}/images/brand/logo-lotus.png`,
   priceRange: site.priceRange,
   address: {

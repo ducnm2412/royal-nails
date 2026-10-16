@@ -1,7 +1,7 @@
 /* Hero: bảng hiệu neon trên nền đêm, dải ảnh xòe như quạt */
 .hero { background: var(--night); color: var(--paper); position: relative; z-index: 1; padding-block: 0; }
 .hero-bg { overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background: url('/images/brand/neon-sign.jpg') center 35% / cover no-repeat; opacity: 0.55; filter: saturate(1.2); }
+.hero-bg { position: absolute; inset: 0; background: url('/images/brand/logo-lotus.png') center 35% / cover no-repeat; opacity: 0.55; filter: saturate(1.2); }
 .hero-bg::after {
   content: ''; position: absolute; inset: 0;
   background:

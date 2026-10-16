@@ -25,8 +25,8 @@ export const story = [
 ];
 
 export const studioStrip = [
-  { src: '/images/gallery/nail-07.jpg', alt: 'Blue striped nails with black stars', w: 1840, h: 1344 },
-  { src: '/images/gallery/nail-01.jpg', alt: 'Navy star nails on a blue towel', w: 1280, h: 1920 },
-  { src: '/images/gallery/nail-08.jpg', alt: 'Holographic nails in sunlight', w: 1840, h: 1344 },
-  { src: '/images/gallery/nail-03.jpg', alt: 'Pink stiletto nails with 3D flowers', w: 1600, h: 1600 },
+  { src: '/images/gallery/mani-03.jpg', alt: 'Pink to white ombré with sakura accent nails', w: 735, h: 919 },
+  { src: '/images/gallery/mani-07.jpg', alt: 'Pearl French tips with 3D white flowers', w: 736, h: 1104 },
+  { src: '/images/gallery/mani-01.jpg', alt: 'Nude almond nails with pink and white blossoms', w: 736, h: 939 },
+  { src: '/images/gallery/mani-10.jpg', alt: 'Blush nails with bow French tips', w: 1050, h: 1400 },
 ];
