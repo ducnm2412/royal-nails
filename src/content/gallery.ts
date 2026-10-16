@@ -1,4 +1,4 @@
-export type GalleryCategory = 'nail-art' | 'french' | 'chrome-aura' | 'short-natural' | 'pedicure';
+export type GalleryCategory = 'nail-art' | 'french' | 'chrome-aura' | 'short-natural';
 
 export type GalleryItem = {
   img: string;
@@ -16,7 +16,6 @@ export const galleryFilters: { key: 'all' | GalleryCategory; label: string }[] =
   { key: 'french', label: 'French' },
   { key: 'chrome-aura', label: 'Chrome & Aura' },
   { key: 'short-natural', label: 'Short & Natural' },
-  { key: 'pedicure', label: 'Pedicure' },
 ];
 
 /** Toàn bộ ảnh trong public/images/gallery, kích thước thật để masonry không nhảy layout. */
@@ -24,7 +23,6 @@ export const gallery: GalleryItem[] = [
   { img: '/images/gallery/nail-03.jpg', alt: 'Pink stiletto nails with 3D flowers', caption: '3D Blossom', cat: 'nail-art', w: 1600, h: 1600 },
   { img: '/images/gallery/nail-06.jpg', alt: 'Iridescent pink almond nails with tiny red hearts', caption: 'Aura Hearts', cat: 'chrome-aura', w: 1600, h: 1600 },
   { img: '/images/gallery/nail-01.jpg', alt: 'Navy nails with gold stars', caption: 'Celestial Navy', cat: 'short-natural', w: 1280, h: 1920 },
-  { img: '/images/gallery/nail-13.jpg', alt: 'Pedicure with black and white nail art in the spa chair', caption: 'Spa Pedicure', cat: 'pedicure', w: 1344, h: 1728 },
   { img: '/images/gallery/nail-05.jpg', alt: 'Silver chrome nails with crystals', caption: 'Chrome & Crystal', cat: 'chrome-aura', w: 1600, h: 1600 },
   { img: '/images/gallery/nail-10.jpg', alt: 'Black French tip almond nails', caption: 'Black French', cat: 'french', w: 1344, h: 1728 },
   { img: '/images/gallery/nail-04.jpg', alt: 'Pink stiletto nails with hand-sculpted flowers and gold rings', caption: 'Sculpted Petals', cat: 'nail-art', w: 1600, h: 1600 },

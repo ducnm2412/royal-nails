@@ -24,8 +24,8 @@ export const services: Service[] = [
     num: 'II',
     name: 'Pedicure',
     time: '45 – 75 min',
-    img: '/images/gallery/nail-13.jpg',
-    alt: 'Pedicure with black and white nail art in the spa chair',
+    img: '/images/gallery/nail-15.jpg',
+    alt: 'Brown and copper almond nails with a glitter accent',
     text: 'Warm soak, exfoliation, callus care and a massage you will want to stretch out.',
   },
   {

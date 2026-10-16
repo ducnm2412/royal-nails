@@ -25,7 +25,7 @@ export const story = [
 ];
 
 export const studioStrip = [
-  { src: '/images/gallery/nail-13.jpg', alt: 'Pedicure chair at the studio', w: 1344, h: 1728 },
+  { src: '/images/gallery/nail-07.jpg', alt: 'Blue striped nails with black stars', w: 1840, h: 1344 },
   { src: '/images/gallery/nail-01.jpg', alt: 'Navy star nails on a blue towel', w: 1280, h: 1920 },
   { src: '/images/gallery/nail-08.jpg', alt: 'Holographic nails in sunlight', w: 1840, h: 1344 },
   { src: '/images/gallery/nail-03.jpg', alt: 'Pink stiletto nails with 3D flowers', w: 1600, h: 1600 },

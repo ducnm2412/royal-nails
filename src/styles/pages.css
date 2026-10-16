@@ -55,8 +55,7 @@
 .gallery-page:has(#gf-nail-art:checked) .masonry figure:not([data-cat='nail-art']),
 .gallery-page:has(#gf-french:checked) .masonry figure:not([data-cat='french']),
 .gallery-page:has(#gf-chrome-aura:checked) .masonry figure:not([data-cat='chrome-aura']),
-.gallery-page:has(#gf-short-natural:checked) .masonry figure:not([data-cat='short-natural']),
-.gallery-page:has(#gf-pedicure:checked) .masonry figure:not([data-cat='pedicure']) { display: none; }
+.gallery-page:has(#gf-short-natural:checked) .masonry figure:not([data-cat='short-natural']) { display: none; }
 
 /* ===== About ===== */
 .about { padding-block: 5rem 4rem; }
