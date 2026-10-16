@@ -1,8 +1,10 @@
 import { site } from '@/config/site';
+import { FloralDeco } from '@/components/ui/FloralDeco';
 
 export function Visit() {
   return (
     <section id="visit" className="visit bg-art bg-cover" aria-labelledby="visit-title">
+      <FloralDeco variant="roses" pos="tl" size={320} speed={0.7} />
       <div className="wrap">
         <div className="text" data-reveal>
           <span className="kicker">Visit</span>

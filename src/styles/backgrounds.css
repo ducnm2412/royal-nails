@@ -20,8 +20,7 @@
 #services.bg-art { --art-opacity: 0.55; }
 .look.bg-art { --art-fade: var(--porcelain); }
 .ritual.bg-art.bg-cover { --art: url('/images/backgrounds/blossoms.jpg'); --art-opacity: 0.4; }
-.visit.bg-art.bg-cover { --art: url('/images/backgrounds/watercolor-roses.jpg'); --art-opacity: 0.35; }
-.visit.bg-art.bg-cover::before { background-size: 60% auto; background-position: right -10% center; }
+.visit.bg-art.bg-cover { --art: url('/images/backgrounds/watercolor-wash.jpg'); --art-opacity: 0.4; }
 
 /* Trang con */
 .about.bg-art.bg-cover { --art: url('/images/backgrounds/blossoms-corners.jpg'); --art-opacity: 0.45; }

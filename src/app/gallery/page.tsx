@@ -4,6 +4,7 @@ import { PageHead } from '@/components/ui/PageHead';
 import { CtaBand } from '@/components/sections/CtaBand';
 import { ScrollReveal } from '@/components/motion/ScrollReveal';
 import { gallery, galleryFilters } from '@/content/gallery';
+import { FloralDeco } from '@/components/ui/FloralDeco';
 
 export const metadata: Metadata = {
   title: 'Gallery',
@@ -27,6 +28,7 @@ export default function GalleryPage() {
       />
       <ScrollReveal>
         <section className="gallery-page bg-art">
+          <FloralDeco variant="roses" pos="tr" size={340} speed={0.6} />
           <div className="wrap">
             <div className="filters" role="group" aria-label="Filter gallery" data-reveal>
               {galleryFilters.map((f, i) => (

@@ -2,10 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { site } from '@/config/site';
 import { lookbook } from '@/content/lookbook';
+import { FloralDeco } from '@/components/ui/FloralDeco';
 
 export function Lookbook() {
   return (
     <section id="lookbook" className="look bg-art" aria-labelledby="lookbook-title">
+      <FloralDeco variant="roses" pos="bl" size={380} speed={0.8} />
       <div className="wrap">
         <div className="head" data-reveal>
           <div>

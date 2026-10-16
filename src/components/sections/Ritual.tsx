@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import { ritual } from '@/content/ritual';
+import { FloralDeco } from '@/components/ui/FloralDeco';
 
 export function Ritual() {
   return (
     <section id="ritual" className="ritual bg-art bg-cover" aria-labelledby="ritual-title">
+      <FloralDeco variant="sakura" pos="br" size={240} />
       <div className="wrap">
         <div className="ph" data-reveal data-parallax>
           <Image

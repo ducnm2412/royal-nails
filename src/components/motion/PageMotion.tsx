@@ -52,6 +52,12 @@ export function PageMotion() {
           );
         });
 
+        // 3b. Hoa trang trí (FloralDeco) trôi và xoay nhẹ theo cuộn
+        gsap.utils.toArray<HTMLElement>('[data-deco]').forEach((el) => {
+          const speed = Number(el.dataset.deco || 1);
+          gsap.fromTo(el, { y: -40 * speed, rotation: -6 }, { y: 40 * speed, rotation: 6, ease: 'none', scrollTrigger: { trigger: el.parentElement, start: 'top bottom', end: 'bottom top', scrub: 1 } });
+        });
+
         // 4. Nền CTA band
         gsap.utils.toArray<HTMLElement>('.cta-band .bg').forEach((bg) => {
           gsap.to(bg, { yPercent: 14, ease: 'none', scrollTrigger: { trigger: bg.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });

@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { services } from '@/content/services';
+import { FloralDeco } from '@/components/ui/FloralDeco';
 
 export function Services() {
   return (
     <section id="services" className="bg-art" aria-labelledby="services-title">
+      <FloralDeco variant="sakura" pos="tr" size={300} speed={1.2} />
       <div className="wrap">
         <div className="head" data-reveal>
           <div>

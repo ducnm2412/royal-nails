@@ -3,6 +3,7 @@ import { PageHead } from '@/components/ui/PageHead';
 import { Visit } from '@/components/sections/Visit';
 import { ScrollReveal } from '@/components/motion/ScrollReveal';
 import { site } from '@/config/site';
+import { FloralDeco } from '@/components/ui/FloralDeco';
 
 export const metadata: Metadata = {
   title: 'Contact & Hours',
@@ -28,6 +29,7 @@ export default function ContactPage() {
       />
       <ScrollReveal>
         <section className="contact-cards bg-art" aria-label="Contact details">
+          <FloralDeco variant="sakura" pos="tr" size={260} />
           <div className="wrap">
             <div className="card" data-reveal>
               <span className="kicker">Call or text</span>

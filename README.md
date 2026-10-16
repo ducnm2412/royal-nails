@@ -26,7 +26,7 @@ src/
     layout/               Header (dropdown Services + menu mobile), Footer, MobileCallBar
     sections/             Hero, Services, Lookbook, Ritual, Booking, Visit, CtaBand
     motion/               HeroReveal (neon khi tải), ScrollReveal (lộ dần), PageMotion (header ẩn/hiện, parallax, sub-nav)
-    ui/                   Lotus (SVG), SocialLinks, Year, PageHead, Lightbox
+    ui/                   Lotus (SVG), SocialLinks, Year, PageHead, Lightbox, FloralDeco
     analytics/            GA4 / Meta Pixel (bật qua .env)
   config/
     site.ts               THÔNG TIN DOANH NGHIỆP — sửa duy nhất ở đây
@@ -36,9 +36,8 @@ src/
   styles/                 tokens, base, header, hero, sections, booking, footer, lightbox, pages
 public/images/
   brand/                  logo.png (header), logo-lotus.png (gốc), neon-sign.jpg
-  backgrounds/            hoạ tiết nền các section (xem src/styles/backgrounds.css)
-  gallery/                mani-01..11.jpg (ảnh manicure mới) + nail-03/04/06/08/10/12 (ảnh cũ còn giữ)
-  services/               6 ảnh đại diện dịch vụ (cắt từ lưới 3x2 khách gửi)
+  backgrounds/            hoạ tiết nền + sakura-flower.png / watercolor-roses.png (hoa trang trí nổi, FloralDeco)
+  gallery/                mani-*, pedi-*, lash-*, facial-*, wax-* (ảnh theo dịch vụ)
 template/                 bản mẫu & ảnh thô tham khảo (không build)
 ```
 
