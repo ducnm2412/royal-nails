@@ -1,0 +1,31 @@
+footer { border-top: 1px solid var(--line); padding-block: 3rem 2rem; }
+footer .top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+footer .big { font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4rem); color: var(--wine); line-height: 1; }
+footer .blurb { color: var(--muted); margin-top: 0.8rem; max-width: 34ch; font-size: 0.95rem; }
+footer h4 { font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--lotus); margin: 0 0 0.9rem; font-weight: 500; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; font-size: 0.95rem; color: var(--muted); }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--wine); }
+.social { display: flex; gap: 0.6rem; margin-top: 1.2rem; }
+.social a { width: 38px; height: 38px; border: 1px solid var(--line); display: grid; place-items: center; color: var(--wine); }
+.social a:hover { background: var(--wine); color: var(--paper); }
+.social svg { width: 16px; height: 16px; }
+footer .bottom { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+@media (max-width: 800px) {
+  footer .top { grid-template-columns: 1fr 1fr 1.4fr; }
+  footer .brand { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  /* Gọn hơn trên điện thoại: thương hiệu trên cùng, Services | Studio hai cột, Contact dưới */
+  footer { padding-block: 2.2rem 1.4rem; }
+  footer .top { grid-template-columns: 1fr 1fr; gap: 1.6rem 1.2rem; }
+  footer .big { font-size: 2.2rem; }
+  footer .blurb { font-size: 0.9rem; margin-top: 0.5rem; }
+  .social { margin-top: 0.9rem; }
+  .social a { width: 34px; height: 34px; }
+  footer h4 { margin-bottom: 0.6rem; }
+  footer ul { gap: 0.3rem; font-size: 0.9rem; }
+  footer .contact { grid-column: 1 / -1; }
+  footer .contact ul { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; }
+  footer .bottom { margin-top: 1.6rem; padding-top: 0.9rem; font-size: 0.7rem; }
+}

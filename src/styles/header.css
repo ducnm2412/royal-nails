@@ -1,0 +1,19 @@
+/* Header tối, logo chữ neon */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 15; background: var(--night); border-bottom: 1px solid rgba(243, 211, 216, 0.15); }
+.nav .wrap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; padding-block: 0.8rem; gap: 1.5rem; }
+.nav .links { display: flex; justify-content: center; gap: 2rem; font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; }
+.nav .links a { text-decoration: none; color: rgba(250, 243, 236, 0.8); }
+.nav .links a:hover { color: #fff; }
+.logo { font-family: var(--script); font-size: 2rem; color: #ffe4ec; text-decoration: none; line-height: 1; text-shadow: 0 0 14px rgba(217, 73, 125, 0.7); display: flex; align-items: center; }
+.nav .cta { justify-self: end; }
+.nav .cta .btn { padding: 0.7rem 1.3rem; border-radius: 999px; background: var(--paper); color: var(--wine); border-color: var(--paper); }
+.nav .cta .btn:hover { background: #fff; }
+@media (max-width: 860px) { .nav .links { display: none; } .nav .wrap { grid-template-columns: 1fr auto; } }
+
+/* Thanh Gọi / Đặt lịch cố định trên điện thoại */
+.callbar { display: none; }
+@media (max-width: 860px) {
+  .callbar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 15; background: var(--paper); border-top: 1px solid var(--line); padding: 0.6rem var(--gr) calc(0.6rem + env(safe-area-inset-bottom, 0px)) var(--gl); gap: 0.6rem; }
+  .callbar .btn { padding: 0.85rem; }
+  body { padding-bottom: 4.4rem; }
+}

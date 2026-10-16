@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Royal Nail Store — Landing page
 
-## Getting Started
+Trang landing một trang cho tiệm nail & spa tại Ventura, California.
+Next.js 16 (App Router, Cache Components), TypeScript, Tailwind v4 + CSS thuần, `next/font`, GSAP (ScrollTrigger).
 
-First, run the development server:
+## Chạy
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cấu trúc thư mục
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/                    Routing & SEO files
+    layout.tsx            fonts, metadata, JSON-LD NailSalon, analytics
+    page.tsx              lắp ghép các section
+    globals.css           import Tailwind + src/styles/*
+    sitemap.ts, robots.ts, opengraph-image.jpg
+    api/booking/route.ts  nhận form đặt lịch (POST)
+  components/
+    layout/               Header, Footer, MobileCallBar (thanh Gọi/Đặt lịch trên mobile)
+    sections/             Hero, Services, Lookbook, Ritual, Booking, Visit
+    motion/               HeroReveal (chuỗi neon khi tải), ScrollReveal (lộ dần khi cuộn)
+    ui/                   Lotus (SVG), SocialLinks, Year
+    analytics/            GA4 / Meta Pixel (bật qua .env)
+  config/
+    site.ts               THÔNG TIN DOANH NGHIỆP — sửa duy nhất ở đây
+    seo.ts                metadata, viewport, JSON-LD
+  content/                dữ liệu hiển thị: services, lookbook, ritual, navigation
+  lib/gsap.ts             đăng ký plugin GSAP một lần
+  styles/                 tokens, base, header, hero, sections, booking, footer
+public/images/
+  brand/                  neon-sign.jpg, logo-lotus.png
+  gallery/                nail-01..16.jpg
+template/                 bản mẫu & ảnh thô tham khảo (không build)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Trước khi lên production — thay placeholder
 
-## Learn More
+Tất cả nằm trong `src/config/site.ts` (các dòng có `TODO`):
 
-To learn more about Next.js, take a look at the following resources:
+- `url` — domain thật (canonical, Open Graph, sitemap, JSON-LD)
+- `phoneDisplay` / `phoneHref` — số điện thoại
+- `address`, `geo`, `mapsUrl`, `mapsEmbedUrl` — địa chỉ & link Google Maps (Share > Embed a map)
+- `hours` / `hoursShort` — giờ mở cửa
+- `social` — Facebook, Instagram, TikTok, Yelp
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Form đặt lịch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`components/sections/Booking.tsx` gửi POST tới `app/api/booking/route.ts`. Hiện API chỉ kiểm tra và log.
+Nối với email (Resend / SendGrid), SMS (Twilio) hoặc Square Appointments / Booksy / Fresha tại chỗ đánh dấu `TODO`.
 
-## Deploy on Vercel
+## SEO & quảng cáo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Metadata, Open Graph, `NailSalon` JSON-LD: `src/config/seo.ts`
+- `sitemap.xml`, `robots.txt`, `opengraph-image.jpg` sinh tự động từ `src/app/`
+- Mã theo dõi: copy `.env.example` → `.env.local`, điền `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_META_PIXEL_ID`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Chuyển động (GSAP)
+
+- `HeroReveal`: một timeline khi tải trang (bảng hiệu neon bật sáng, dải ảnh xòe lên)
+- `ScrollReveal`: `ScrollTrigger.batch` cho mọi phần tử `[data-reveal]`, parallax nhẹ ở ảnh Ritual
+- Cả hai bọc trong `gsap.matchMedia('(prefers-reduced-motion: no-preference)')`; không JS vẫn thấy đủ nội dung

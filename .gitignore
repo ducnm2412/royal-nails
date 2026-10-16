@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ảnh nguồn độ phân giải cao (đã chép vào public/images/gallery)
+/images-to-upscale

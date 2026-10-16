@@ -1,0 +1,49 @@
+import Image from 'next/image';
+import { services } from '@/content/services';
+
+export function Services() {
+  return (
+    <section id="services" aria-labelledby="services-title">
+      <div className="wrap">
+        <div className="head" data-reveal>
+          <div>
+            <span className="kicker">Services</span>
+            <h2 id="services-title">
+              Everything beautiful,
+              <br />
+              <span className="it">under one roof.</span>
+            </h2>
+          </div>
+          <p>
+            Book one service or build a full afternoon. Every appointment opens with a short consultation on shape,
+            shade and skin, so the result suits you rather than the trend.
+          </p>
+        </div>
+        <div className="svcs">
+          {services.map((s) => (
+            <article className="svc" key={s.slug} data-reveal>
+              {/* Ảnh mở lightbox; tiêu đề dẫn tới form đặt lịch */}
+              <div className="ph">
+                <Image
+                  src={s.img}
+                  alt={s.alt}
+                  fill
+                  quality={90}
+                  sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 420px"
+                  data-lightbox={s.img}
+                  data-caption={s.name}
+                />
+                <span className="n" aria-hidden="true">{s.num}</span>
+              </div>
+              <a className="row" href="#book">
+                <h3>{s.name}</h3>
+                <span>{s.time}</span>
+              </a>
+              <p>{s.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
