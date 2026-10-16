@@ -43,7 +43,7 @@ export function Hero() {
                 </div>
                 <div>
                   <dt>Location</dt>
-                  <dd>Downtown Ventura</dd>
+                  <dd>Johnson Dr, off the 101</dd>
                 </div>
               </dl>
             </div>

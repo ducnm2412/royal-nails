@@ -15,16 +15,16 @@ export const site = {
   email: 'hello@royalnailstore.com', // TODO
 
   address: {
-    street: '123 Main Street, Suite A', // TODO
+    street: '2855 Johnson Drive, Suite V',
     city: 'Ventura',
     region: 'CA',
-    postal: '93001',
+    postal: '93003',
     country: 'US',
   },
-  geo: { lat: 34.2805, lng: -119.2945 }, // TODO: toạ độ thật
+  geo: { lat: 34.2592, lng: -119.2223 }, // Johnson Dr & Ventura Blvd (ước tính)
 
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Royal+Nails+%26+Spa+Ventura+CA', // TODO: link Google Maps
-  mapsEmbedUrl: 'https://www.google.com/maps?q=Royal+Nails+%26+Spa+Ventura+CA&output=embed', // TODO: Google Maps > Share > Embed
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Royal+Nails+%26+Spa%2C+2855+Johnson+Dr+Suite+V%2C+Ventura%2C+CA+93003',
+  mapsEmbedUrl: 'https://www.google.com/maps?q=Royal+Nails+%26+Spa%2C+2855+Johnson+Dr+Suite+V%2C+Ventura%2C+CA+93003&output=embed',
 
   hours: [
     {

@@ -16,7 +16,7 @@ export function Visit() {
             {site.address.city}, {site.address.region} {site.address.postal}
           </p>
           <p className="m">
-            In the heart of Ventura, minutes from Downtown and the 101, with free parking out front. We welcome guests
+            On Johnson Drive just off the 101, next to the North Bank Shopping Center, with free parking out front. We welcome guests
             from {site.serviceArea.slice(1).join(', ')}.
           </p>
           <div className="btns">
