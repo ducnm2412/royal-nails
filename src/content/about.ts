@@ -26,7 +26,7 @@ export const story = [
 
 export const studioStrip = [
   { src: '/images/gallery/mani-03.jpg', alt: 'Pink to white ombré with sakura accent nails', w: 735, h: 919 },
-  { src: '/images/gallery/mani-07.jpg', alt: 'Pearl French tips with 3D white flowers', w: 736, h: 1104 },
-  { src: '/images/gallery/mani-01.jpg', alt: 'Nude almond nails with pink and white blossoms', w: 736, h: 939 },
-  { src: '/images/gallery/mani-10.jpg', alt: 'Blush nails with bow French tips', w: 1050, h: 1400 },
+  { src: '/images/gallery/facial-04.jpg', alt: 'Rose clay mask facial surrounded by pink roses', w: 736, h: 1016 },
+  { src: '/images/gallery/lash-01.jpg', alt: 'Full volume lash extensions with soft glam makeup', w: 1024, h: 1024 },
+  { src: '/images/gallery/pedi-01.jpg', alt: 'Nude pedicure with brown polka dots', w: 736, h: 1104 },
 ];

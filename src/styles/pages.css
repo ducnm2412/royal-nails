@@ -23,7 +23,7 @@
 .svc-detail .wrap { display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: center; max-width: 1000px; }
 .svc-detail.flip .wrap { grid-template-columns: 1fr 340px; }
 .svc-detail.flip .ph { order: 2; }
-.svc-detail .ph { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--blush); }
+.svc-detail .ph { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--blush); }
 .svc-detail .ph.square { aspect-ratio: 1 / 1; }
 .svc-detail .ph img { object-fit: cover; }
 .svc-detail .ph[data-parallax] img { height: 118% !important; top: -9% !important; }
@@ -56,11 +56,15 @@
 .masonry img { width: 100%; height: auto; display: block; transition: transform 0.6s; }
 .masonry figure:hover img { transform: scale(1.03); }
 .masonry figcaption { position: absolute; left: 0; bottom: 0; padding: 0.45rem 0.75rem; font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--paper); background: var(--wine); }
+
 /* Ẩn ảnh không thuộc bộ lọc đang chọn */
 .gallery-page:has(#gf-nail-art:checked) .masonry figure:not([data-cat='nail-art']),
 .gallery-page:has(#gf-french:checked) .masonry figure:not([data-cat='french']),
-.gallery-page:has(#gf-chrome-aura:checked) .masonry figure:not([data-cat='chrome-aura']),
-.gallery-page:has(#gf-short-natural:checked) .masonry figure:not([data-cat='short-natural']) { display: none; }
+.gallery-page:has(#gf-short-natural:checked) .masonry figure:not([data-cat='short-natural']),
+.gallery-page:has(#gf-pedicure:checked) .masonry figure:not([data-cat='pedicure']),
+.gallery-page:has(#gf-lashes:checked) .masonry figure:not([data-cat='lashes']),
+.gallery-page:has(#gf-facial:checked) .masonry figure:not([data-cat='facial']),
+.gallery-page:has(#gf-waxing:checked) .masonry figure:not([data-cat='waxing']) { display: none; }
 
 /* ===== About ===== */
 .about { padding-block: 5rem 4rem; }
