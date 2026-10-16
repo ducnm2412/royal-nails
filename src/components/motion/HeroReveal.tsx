@@ -28,6 +28,7 @@ export function HeroReveal({ children }: { children: ReactNode }) {
           .from('.hero-photo', { autoAlpha: 0, x: 60, rotation: 4, duration: 1, ease: 'power3.out' }, 0.6)
           .from('.petal', { autoAlpha: 0, scale: 0.4, duration: 0.8, stagger: 0.15, ease: 'back.out(1.6)', clearProps: 'transform' }, 1.2)
           .from('.hero-badge', { autoAlpha: 0, y: 20, duration: 0.6 }, 1.5)
+          .from('.mini', { autoAlpha: 0, scale: 0.6, y: 30, duration: 0.7, stagger: 0.12, ease: 'back.out(1.5)', clearProps: 'transform,opacity,visibility' }, 1.3)
           // Ảnh xòe lên từ dưới; clearProps trả transform về CSS để giữ góc nghiêng và hiệu ứng hover
           .from('.hero-strip img', { autoAlpha: 0, y: '+=80', duration: 0.9, stagger: { each: 0.08, from: 'center' }, ease: 'back.out(1.4)', clearProps: 'transform,opacity,visibility' }, 1.3);
 

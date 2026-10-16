@@ -1,5 +1,5 @@
 /* ===== Trang con: đầu trang dùng chung ===== */
-.page-head { position: relative; background: var(--night); color: var(--paper); padding-block: 4rem 3.5rem; overflow: hidden; }
+.page-head { position: relative; background: var(--night); color: var(--paper); padding-block: calc(var(--nav-h) + 3rem) 3.5rem; overflow: hidden; }
 .page-head-bg { position: absolute; inset: -12% 0; background: url('/images/brand/logo-lotus.png') center 40% / cover no-repeat; opacity: 0.22; filter: saturate(1.1); }
 .page-head-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18, 10, 15, 0.5), rgba(18, 10, 15, 0.85)); }
 .page-head .wrap { position: relative; display: grid; gap: 1.2rem; }
@@ -19,7 +19,7 @@
 .sub-nav a.is-active { color: var(--wine); border-bottom: 1px solid var(--lotus); padding-bottom: 0.15rem; }
 
 /* Mỗi dịch vụ gọn trong ~2/3 màn hình: ảnh 340px, nội dung tối đa 980px */
-.svc-detail { padding-block: 3rem; border-bottom: 1px solid var(--line); scroll-margin-top: 120px; }
+.svc-detail { padding-block: 3rem; border-bottom: 1px solid var(--line); scroll-margin-top: 150px; }
 .svc-detail .wrap { display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: center; max-width: 1000px; }
 .svc-detail.flip .wrap { grid-template-columns: 1fr 340px; }
 .svc-detail.flip .ph { order: 2; }

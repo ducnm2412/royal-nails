@@ -12,7 +12,7 @@
     radial-gradient(ellipse 55% 60% at 70% 40%, rgba(217, 73, 125, 0.18), transparent 70%),
     linear-gradient(180deg, rgba(18, 10, 15, 0.2), rgba(18, 10, 15, 0) 40%, var(--night) 100%);
 }
-.hero .wrap { position: relative; display: flex; flex-direction: column; gap: 3.5rem; padding-block: 4rem 0; }
+.hero .wrap { position: relative; display: flex; flex-direction: column; gap: 3.5rem; padding-block: calc(var(--nav-h) + 2.5rem) 0; }
 
 .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; align-items: center; }
 .hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 1.4rem; max-width: 560px; }
@@ -39,6 +39,14 @@
 .hero-badge strong { font-family: var(--display); font-weight: 600; font-size: 2rem; line-height: 1; }
 .hero-badge small { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--lotus); }
 
+.mini { margin: 0; position: absolute; z-index: 3; width: 112px; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 10px; border: 3px solid rgba(250, 243, 236, 0.95); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45); background: var(--blush); transition: transform 0.35s; }
+.mini img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: auto; }
+.mini-a { top: 12%; right: -84px; transform: rotate(7deg); }
+.mini-b { top: 48%; right: -96px; transform: rotate(-5deg); }
+.mini-c { top: 34%; left: -88px; transform: rotate(-8deg); }
+.mini:hover { transform: rotate(0) scale(1.06); z-index: 4; }
+@media (max-width: 1100px) { .mini { width: 96px; } .mini-a { right: -60px; } .mini-b { right: -70px; } .mini-c { left: -64px; } }
+
 /* Dải ảnh xòe quạt (giữ nguyên) */
 .hero-strip { display: flex; justify-content: center; align-items: flex-end; gap: 1rem; width: 100%; margin-bottom: -3.5rem; }
 .hero-strip img {
@@ -63,11 +71,15 @@
   .petal-a { width: 120px; top: -30px; left: -40px; }
   .petal-b { width: 90px; right: -30px; }
   .hero-badge { left: -0.6rem; }
+  .mini { width: 80px; }
+  .mini-a { right: -40px; top: 8%; }
+  .mini-b { right: -44px; top: 52%; }
+  .mini-c { left: -44px; top: 30%; }
 }
 @media (max-width: 700px) {
   .hero-strip img:nth-child(1), .hero-strip img:nth-child(5) { display: none; }
   .hero-strip { gap: 0.7rem; }
-  .hero .wrap { padding-top: 3rem; gap: 2.5rem; }
+  .hero .wrap { padding-top: calc(var(--nav-h) + 1.5rem); gap: 2.5rem; }
 }
 
 /* Hoa trang trí nổi cho các section sáng (FloralDeco) */

@@ -1,16 +1,16 @@
 footer { border-top: 1px solid var(--line); padding-block: 3rem 2rem; }
 footer .top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
 footer .big { font-family: var(--display); font-weight: 600; font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--wine); line-height: 1; }
-footer .blurb { color: var(--muted); margin-top: 0.8rem; max-width: 34ch; font-size: 0.95rem; }
-footer h4 { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lotus); margin: 0 0 0.9rem; font-weight: 600; }
-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; font-size: 0.95rem; color: var(--muted); }
+footer .blurb { color: var(--ink); margin-top: 0.8rem; max-width: 34ch; font-size: 0.98rem; }
+footer h4 { font-size: 0.76rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--wine); margin: 0 0 0.9rem; font-weight: 700; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; font-size: 1rem; color: var(--ink); font-weight: 500; }
 footer a { text-decoration: none; }
-footer a:hover { color: var(--wine); }
+footer a:hover { color: var(--lotus); }
 .social { display: flex; gap: 0.6rem; margin-top: 1.2rem; }
 .social a { width: 38px; height: 38px; border: 1px solid var(--line); display: grid; place-items: center; color: var(--wine); }
 .social a:hover { background: var(--wine); color: var(--paper); }
 .social svg { width: 16px; height: 16px; }
-footer .bottom { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+footer .bottom { margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); font-weight: 500; }
 @media (max-width: 800px) {
   footer .top { grid-template-columns: 1fr 1fr 1.4fr; }
   footer .brand { grid-column: 1 / -1; }

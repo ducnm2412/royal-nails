@@ -72,6 +72,16 @@ export function Hero() {
                 <strong>6</strong>
                 <small>services, one studio</small>
               </span>
+              {/* Thẻ ảnh nhỏ các dịch vụ khác */}
+              <figure className="mini mini-a">
+                <Image src="/images/gallery/lash-02.jpg" alt="" width={1050} height={1400} sizes="120px" quality={85} data-lightbox="/images/gallery/lash-02.jpg" data-caption="Wispy Hybrid Lashes" />
+              </figure>
+              <figure className="mini mini-b">
+                <Image src="/images/gallery/facial-02.jpg" alt="" width={736} height={1308} sizes="120px" quality={85} data-lightbox="/images/gallery/facial-02.jpg" data-caption="Signature Facial" />
+              </figure>
+              <figure className="mini mini-c">
+                <Image src="/images/gallery/pedi-01.jpg" alt="" width={736} height={1104} sizes="120px" quality={85} data-lightbox="/images/gallery/pedi-01.jpg" data-caption="Dotted Pedicure" />
+              </figure>
             </div>
           </div>
 

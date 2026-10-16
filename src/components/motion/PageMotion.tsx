@@ -32,6 +32,10 @@ export function PageMotion() {
             },
             onLeaveBack: () => nav.classList.remove('is-hidden'),
           });
+          // Trong suốt ở đầu trang, nền đêm khi cuộn
+          const solid = () => nav.classList.toggle('is-solid', window.scrollY > 40);
+          solid();
+          ScrollTrigger.create({ start: 0, end: 'max', onUpdate: solid });
         }
 
         // 2. Parallax nền đầu trang con

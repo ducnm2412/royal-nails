@@ -27,7 +27,7 @@
 .svc-detail.bg-art:nth-of-type(odd) { --art-opacity: 0.3; }
 
 /* Footer: hoạ tiết hoa sen lặp nhẹ */
-footer.bg-art { --art-opacity: 0.6; }
+footer.bg-art { --art-opacity: 0.28; }
 
 @media (max-width: 700px) {
   .bg-art::before { --art-opacity: 0.35; }

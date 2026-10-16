@@ -1,7 +1,11 @@
 /* Header tối, logo chữ neon */
-.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 15; background: var(--night); border-bottom: 1px solid rgba(243, 211, 216, 0.15); transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
+/* Navbar nổi đè lên hero: trong suốt ở đầu trang, chuyển nền đêm khi cuộn (.is-solid do PageMotion gắn) */
+:root { --nav-h: 92px; }
+.nav { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 15; background: transparent; border-bottom: 1px solid transparent; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), background 0.35s, border-color 0.35s; }
+.nav.is-solid, .menu-open .nav { background: rgba(18, 10, 15, 0.92); backdrop-filter: blur(10px); border-bottom-color: rgba(243, 211, 216, 0.15); }
 .nav.is-hidden { transform: translateY(-100%); }
 .nav.is-hidden ~ * .sub-nav { top: env(safe-area-inset-top, 0px); }
+.sub-nav { top: calc(env(safe-area-inset-top, 0px) + var(--nav-h)) !important; }
 .sub-nav { transition: top 0.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .menu-open .nav.is-hidden { transform: none; }
 .menu-open body { overflow: hidden; }
@@ -55,7 +59,7 @@
 
 /* Ngăn kéo menu điện thoại */
 .drawer {
-  display: none; position: fixed; inset: calc(env(safe-area-inset-top, 0px) + 65px) 0 0; background: var(--night); color: var(--paper);
+  display: none; position: fixed; inset: calc(env(safe-area-inset-top, 0px) + var(--nav-h)) 0 0; background: var(--night); color: var(--paper);
   padding: 0.6rem var(--gr) calc(1rem + env(safe-area-inset-bottom, 0px)) var(--gl);
   overflow-y: auto; flex-direction: column; justify-content: flex-start; gap: 1.2rem;
   opacity: 0; transform: translateY(-8px); transition: opacity 0.3s, transform 0.3s;
