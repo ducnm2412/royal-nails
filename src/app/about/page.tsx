@@ -24,7 +24,7 @@ export default function AboutPage() {
         text="Royal Nail Store is a Ventura atelier where beauty rituals are done slowly and well."
       />
       <ScrollReveal>
-        <section className="about" aria-labelledby="story-title">
+        <section className="about bg-art" aria-labelledby="story-title">
           <div className="wrap">
             <div className="about-grid">
               {/* Collage: bảng hiệu neon đúng tỉ lệ 3:2 + hai bộ móng, viền giấy như ảnh dán album */}

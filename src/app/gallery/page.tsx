@@ -26,7 +26,7 @@ export default function GalleryPage() {
         text="Every set here was done in this studio. Save the ones you love and mention them when you book; we will match the shape, shade and finish."
       />
       <ScrollReveal>
-        <section className="gallery-page">
+        <section className="gallery-page bg-art">
           <div className="wrap">
             <div className="filters" role="group" aria-label="Filter gallery" data-reveal>
               {galleryFilters.map((f, i) => (

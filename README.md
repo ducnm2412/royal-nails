@@ -35,7 +35,8 @@ src/
   lib/gsap.ts             đăng ký plugin GSAP một lần
   styles/                 tokens, base, header, hero, sections, booking, footer, lightbox, pages
 public/images/
-  brand/                  neon-sign.jpg, logo-lotus.png
+  brand/                  logo.png (header), logo-lotus.png (gốc), neon-sign.jpg
+  backgrounds/            hoạ tiết nền các section (xem src/styles/backgrounds.css)
   gallery/                nail-01..16.jpg
 template/                 bản mẫu & ảnh thô tham khảo (không build)
 ```

@@ -34,7 +34,7 @@ export default function ServicesPage() {
       </nav>
       <ScrollReveal>
         {serviceDetails.map((s, i) => (
-          <section className={`svc-detail${i % 2 ? ' flip' : ''}`} id={s.slug} key={s.slug} aria-labelledby={`${s.slug}-title`}>
+          <section className={`svc-detail bg-art${i % 2 ? ' flip' : ''}`} id={s.slug} key={s.slug} aria-labelledby={`${s.slug}-title`}>
             <div className="wrap">
               <div className={`ph${s.square ? ' square' : ''}`} data-reveal data-parallax>
                 <Image

@@ -4,7 +4,7 @@ import { services } from '@/content/services';
 
 export function Services() {
   return (
-    <section id="services" aria-labelledby="services-title">
+    <section id="services" className="bg-art" aria-labelledby="services-title">
       <div className="wrap">
         <div className="head" data-reveal>
           <div>

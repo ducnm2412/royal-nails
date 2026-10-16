@@ -1,0 +1,33 @@
+/* Ảnh nền hoạ tiết (public/images/backgrounds).
+   Dùng pseudo-element + mix-blend-mode: multiply để nền trắng của ảnh hoà vào giấy kem,
+   kèm gradient mờ hai đầu để chữ luôn đọc được. */
+.bg-art { position: relative; isolation: isolate; }
+.bg-art::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image: var(--art); background-size: cover; background-position: center;
+  mix-blend-mode: multiply; opacity: var(--art-opacity, 0.55);
+}
+.bg-art::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, var(--art-fade, var(--paper)) 0%, transparent 18%, transparent 82%, var(--art-fade, var(--paper)) 100%);
+}
+
+/* Trang chủ */
+#services.bg-art { --art: url('/images/backgrounds/blossoms.jpg'); --art-opacity: 0.5; }
+.look.bg-art { --art: url('/images/backgrounds/butterflies.jpg'); --art-opacity: 0.7; --art-fade: var(--porcelain); }
+.ritual.bg-art { --art: url('/images/backgrounds/ink-flowers.jpg'); --art-opacity: 0.45; }
+.visit.bg-art { --art: url('/images/backgrounds/watercolor-wash.jpg'); --art-opacity: 0.6; }
+
+/* Trang con */
+.gallery-page.bg-art { --art: url('/images/backgrounds/blossoms-corners.jpg'); --art-opacity: 0.55; }
+.contact-cards.bg-art { --art: url('/images/backgrounds/blossoms.jpg'); --art-opacity: 0.5; }
+.about.bg-art { --art: url('/images/backgrounds/watercolor-petals.jpg'); --art-opacity: 0.4; }
+.svc-detail.bg-art:nth-of-type(even) { --art: url('/images/backgrounds/watercolor-wash.jpg'); --art-opacity: 0.35; }
+
+/* Footer: hoạ tiết hoa sen lặp nhẹ */
+footer.bg-art { --art: url('/images/backgrounds/lotus-pattern.jpg'); --art-opacity: 0.6; }
+footer.bg-art::before { background-size: 520px auto; background-repeat: repeat; background-position: top left; }
+
+@media (max-width: 700px) {
+  .bg-art::before { --art-opacity: 0.35; }
+}

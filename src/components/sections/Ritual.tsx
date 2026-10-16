@@ -3,7 +3,7 @@ import { ritual } from '@/content/ritual';
 
 export function Ritual() {
   return (
-    <section id="ritual" className="ritual" aria-labelledby="ritual-title">
+    <section id="ritual" className="ritual bg-art" aria-labelledby="ritual-title">
       <div className="wrap">
         <div className="ph" data-reveal data-parallax>
           <Image

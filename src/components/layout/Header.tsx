@@ -28,7 +28,7 @@ export function Header() {
     <header className="nav">
       <div className="wrap">
         <Link className="logo" href="/" aria-label="Royal Nail Store, home">
-          Royal
+          <Image src="/images/brand/logo.png" alt="Royal Nails & Spa" width={708} height={564} priority />
         </Link>
 
         <nav className="links" aria-label="Main">

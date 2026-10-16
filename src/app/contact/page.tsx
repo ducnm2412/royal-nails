@@ -27,7 +27,7 @@ export default function ContactPage() {
         text="Walk-ins are welcome whenever a chair is free; appointments guarantee your time."
       />
       <ScrollReveal>
-        <section className="contact-cards" aria-label="Contact details">
+        <section className="contact-cards bg-art" aria-label="Contact details">
           <div className="wrap">
             <div className="card" data-reveal>
               <span className="kicker">Call or text</span>

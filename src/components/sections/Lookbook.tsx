@@ -5,7 +5,7 @@ import { lookbook } from '@/content/lookbook';
 
 export function Lookbook() {
   return (
-    <section id="lookbook" className="look" aria-labelledby="lookbook-title">
+    <section id="lookbook" className="look bg-art" aria-labelledby="lookbook-title">
       <div className="wrap">
         <div className="head" data-reveal>
           <div>

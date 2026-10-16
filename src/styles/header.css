@@ -12,7 +12,10 @@
 .nav .links a:hover { color: #fff; }
 .nav .links a[aria-current='page'] { color: #fff; border-bottom: 1px solid var(--lotus); padding-bottom: 0.2rem; }
 .nav .chev { width: 10px; height: 10px; transition: transform 0.25s; }
-.logo { font-family: var(--script); font-size: 2rem; color: #ffe4ec; text-decoration: none; line-height: 1; text-shadow: 0 0 14px rgba(217, 73, 125, 0.7); display: flex; align-items: center; }
+/* Logo: ảnh bảng hiệu neon của khách (public/images/brand/logo.png) */
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 60px; width: auto; display: block; }
+@media (max-width: 860px) { .logo img { height: 50px; } }
 .nav .cta { justify-self: end; display: flex; align-items: center; gap: 0.8rem; }
 .nav .cta .btn { padding: 0.7rem 1.3rem; border-radius: 999px; background: var(--paper); color: var(--wine); border-color: var(--paper); }
 .nav .cta .btn:hover { background: #fff; }

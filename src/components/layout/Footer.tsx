@@ -7,7 +7,7 @@ import { Year } from '@/components/ui/Year';
 
 export function Footer() {
   return (
-    <footer>
+    <footer className="bg-art">
       <div className="wrap">
         <div className="top">
           <div className="brand">
