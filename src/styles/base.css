@@ -5,7 +5,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 17px;
   line-height: 1.65;
 }
@@ -13,20 +13,20 @@ body::before { content: ''; position: fixed; inset: 0 0 auto; height: env(safe-a
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 p { margin: 0; }
-h1, h2, h3, h4 { margin: 0; font-weight: 400; line-height: 1; text-wrap: balance; }
+h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.05; text-wrap: balance; }
 :focus-visible { outline: 2px solid var(--lotus); outline-offset: 3px; }
 
 .wrap { max-width: var(--wrap); margin-inline: auto; padding-left: var(--gl); padding-right: var(--gr); }
-.display { font-family: var(--display); color: var(--wine); letter-spacing: 0.01em; }
-.it { font-family: var(--serif); font-style: italic; font-weight: 400; }
+.display { font-family: var(--display); font-weight: 600; color: var(--wine); letter-spacing: 0; }
+.it { font-family: var(--serif); font-style: italic; font-weight: 500; }
 
-.kicker { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--lotus); font-weight: 500; display: flex; align-items: center; gap: 0.8rem; }
+.kicker { font-size: 0.74rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--lotus); font-weight: 600; display: flex; align-items: center; gap: 0.8rem; }
 .kicker::before { content: ''; width: 28px; height: 1px; background: var(--lotus); }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
   padding: 1rem 1.8rem;
-  font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500;
+  font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
   text-decoration: none; border: 1px solid var(--wine); color: var(--wine); background: transparent; cursor: pointer;
   transition: background 0.25s, color 0.25s, border-color 0.25s;
 }
@@ -45,7 +45,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; line-height: 1; text-wrap: balance
 /* Section head dùng chung (Services, Lookbook) */
 section { padding-block: 6rem; }
 .head { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; margin-bottom: 3.5rem; }
-.head h2 { font-family: var(--display); color: var(--wine); font-size: clamp(2.4rem, 5vw, 4.2rem); margin-top: 1rem; }
+.head h2 { font-family: var(--display); font-weight: 600; color: var(--wine); font-size: clamp(2.3rem, 4.6vw, 3.8rem); margin-top: 1rem; }
 .head h2 .it { color: var(--lotus); }
 .head p { color: var(--muted); max-width: 50ch; justify-self: end; }
 @media (max-width: 800px) { .head { grid-template-columns: 1fr; } .head p { justify-self: start; } }

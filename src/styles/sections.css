@@ -1,13 +1,13 @@
 /* Services */
 .svcs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem 1.4rem; }
 .svc { text-decoration: none; color: inherit; display: grid; gap: 1rem; }
-.svc .ph { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--blush); }
+.svc .ph { position: relative; overflow: hidden; aspect-ratio: 1 / 1; background: var(--blush); }
 .svc .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .svc:hover .ph img { transform: scale(1.05); }
 .svc .ph .n { position: absolute; top: 1rem; left: 1rem; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--paper); background: var(--wine); width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; }
 .svc .row { text-decoration: none; color: inherit; display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 0.6rem; }
-.svc h3 { font-family: var(--display); font-size: 1.9rem; color: var(--wine); }
-.svc .row span { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lotus); font-weight: 500; }
+.svc h3 { font-family: var(--display); font-weight: 600; font-size: 1.75rem; color: var(--wine); }
+.svc .row span { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lotus); font-weight: 600; }
 .svc p { color: var(--muted); font-size: 0.95rem; }
 @media (max-width: 900px) { .svcs { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .svcs { grid-template-columns: 1fr; } }
@@ -42,17 +42,17 @@
 .ritual .ph img { width: 100%; height: 100%; object-fit: cover; }
 .ritual .ph[data-parallax] img { height: 118% !important; top: -9% !important; }
 .ritual .ph .badge { position: absolute; right: -1px; bottom: 2rem; background: var(--paper); color: var(--wine); padding: 0.9rem 1.2rem; font-family: var(--serif); font-style: italic; font-size: 1.2rem; border: 1px solid var(--line); border-right: 0; }
-.ritual h2 { font-family: var(--display); color: var(--wine); font-size: clamp(2.4rem, 5vw, 4.2rem); margin-top: 1rem; }
+.ritual h2 { font-family: var(--display); font-weight: 600; color: var(--wine); font-size: clamp(2.3rem, 4.6vw, 3.8rem); margin-top: 1rem; }
 .steps { display: grid; border-top: 1px solid var(--line); margin-top: 2.5rem; }
 .step { display: grid; grid-template-columns: 3.5rem 1fr; gap: 1.2rem; padding: 1.4rem 0; border-bottom: 1px solid var(--line); align-items: start; }
-.step .n { font-family: var(--display); font-size: 2rem; color: var(--lotus); line-height: 1; }
-.step h3 { font-family: var(--display); font-size: 1.6rem; color: var(--wine); margin-bottom: 0.3rem; }
+.step .n { font-family: var(--display); font-weight: 600; font-size: 1.9rem; color: var(--lotus); line-height: 1; }
+.step h3 { font-family: var(--display); font-weight: 600; font-size: 1.55rem; color: var(--wine); margin-bottom: 0.3rem; }
 .step p { color: var(--muted); font-size: 0.95rem; max-width: 52ch; }
 @media (max-width: 860px) { .ritual .wrap { grid-template-columns: 1fr; } .ritual .ph { max-width: 480px; } }
 
 /* Visit + bản đồ */
 .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.visit .addr { font-family: var(--display); font-size: clamp(1.6rem, 2.6vw, 2.2rem); color: var(--wine); line-height: 1.2; }
+.visit .addr { font-family: var(--display); font-weight: 600; font-size: clamp(1.6rem, 2.6vw, 2.2rem); color: var(--wine); line-height: 1.2; }
 .visit .text { display: flex; flex-direction: column; gap: 1.4rem; }
 .visit .text p.m { color: var(--muted); max-width: 48ch; }
 

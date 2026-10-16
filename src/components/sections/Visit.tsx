@@ -2,7 +2,7 @@ import { site } from '@/config/site';
 
 export function Visit() {
   return (
-    <section id="visit" className="visit bg-art" aria-labelledby="visit-title">
+    <section id="visit" className="visit bg-art bg-cover" aria-labelledby="visit-title">
       <div className="wrap">
         <div className="text" data-reveal>
           <span className="kicker">Visit</span>

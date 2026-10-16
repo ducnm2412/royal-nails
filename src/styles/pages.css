@@ -5,7 +5,7 @@
 .page-head .wrap { position: relative; display: grid; gap: 1.2rem; }
 .page-head .kicker { color: var(--blush); }
 .page-head .kicker::before { background: var(--blush); }
-.page-head h1 { color: var(--paper); font-size: clamp(2.6rem, 6vw, 4.8rem); line-height: 1.02; }
+.page-head h1 { color: var(--paper); font-weight: 600; font-size: clamp(2.4rem, 5.2vw, 4.2rem); line-height: 1.05; }
 .page-head h1 .it { color: var(--lotus); }
 .page-head p { color: rgba(250, 243, 236, 0.78); max-width: 62ch; font-size: 1.02rem; }
 .nav .links a[aria-current='page'] { color: #fff; border-bottom: 1px solid var(--lotus); padding-bottom: 0.2rem; }
@@ -23,7 +23,7 @@
 .svc-detail .wrap { display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: center; max-width: 1000px; }
 .svc-detail.flip .wrap { grid-template-columns: 1fr 340px; }
 .svc-detail.flip .ph { order: 2; }
-.svc-detail .ph { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--blush); }
+.svc-detail .ph { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: var(--blush); }
 .svc-detail .ph.square { aspect-ratio: 1 / 1; }
 .svc-detail .ph img { object-fit: cover; }
 .svc-detail .ph[data-parallax] img { height: 118% !important; top: -9% !important; }
@@ -34,8 +34,8 @@
 .price-list li { display: grid; grid-template-columns: auto 1fr auto auto; align-items: baseline; gap: 0.9rem; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
 .price-list .name { color: var(--ink); }
 .price-list .dots { border-bottom: 1px dotted var(--line); transform: translateY(-0.3em); }
-.price-list .time { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-.price-list .price { font-family: var(--display); font-size: 1.15rem; color: var(--wine); min-width: 3.2rem; text-align: right; font-variant-numeric: tabular-nums; }
+.price-list .time { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.price-list .price { font-family: var(--sans); font-weight: 600; font-size: 1rem; color: var(--wine); min-width: 3.2rem; text-align: right; font-variant-numeric: tabular-nums; }
 @media (max-width: 860px) {
   .svc-detail .wrap, .svc-detail.flip .wrap { grid-template-columns: 1fr; gap: 2rem; }
   .svc-detail.flip .ph { order: 0; }

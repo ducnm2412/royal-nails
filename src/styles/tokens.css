@@ -1,19 +1,19 @@
 /* Design tokens — bảng màu & chữ của Royal Nail Store.
    Hồng phấn / hoa sen hồng / đỏ rượu vang / trắng kem, theo brief. */
 :root {
-  --paper: #faf3ec;
-  --porcelain: #fffcf8;
-  --blush: #f3d3d8;
+  --paper: #fbeeef;      /* hồng nhợt */
+  --porcelain: #fff6f7;
+  --blush: #f5d3da;
   --blush-deep: #e9b3be;
   --lotus: #d9497d;
   --wine: #7a1f38;
   --wine-ink: #4f1224;
   --night: #120a0f;
-  --ink: #2e1b22;
-  --muted: #8c6f77;
+  --ink: #2a141b;
+  --muted: #6e4f58;
   --line: rgba(122, 31, 56, 0.22);
 
-  --display: var(--font-italiana), Georgia, serif;
+  --display: var(--font-cormorant), Georgia, serif;
   --serif: var(--font-cormorant), Georgia, serif;
   --sans: var(--font-figtree), 'Helvetica Neue', Arial, sans-serif;
   --script: var(--font-pinyon), cursive;

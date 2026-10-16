@@ -37,7 +37,8 @@ src/
 public/images/
   brand/                  logo.png (header), logo-lotus.png (gốc), neon-sign.jpg
   backgrounds/            hoạ tiết nền các section (xem src/styles/backgrounds.css)
-  gallery/                nail-01..16.jpg
+  gallery/                nail-01..16.jpg (ảnh thật của tiệm)
+  services/               6 ảnh đại diện dịch vụ (cắt từ lưới 3x2 khách gửi)
 template/                 bản mẫu & ảnh thô tham khảo (không build)
 ```
 

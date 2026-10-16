@@ -13,20 +13,21 @@
 }
 
 /* Trang chủ */
-#services.bg-art { --art: url('/images/backgrounds/blossoms.jpg'); --art-opacity: 0.5; }
-.look.bg-art { --art: url('/images/backgrounds/butterflies.jpg'); --art-opacity: 0.7; --art-fade: var(--porcelain); }
-.ritual.bg-art { --art: url('/images/backgrounds/ink-flowers.jpg'); --art-opacity: 0.45; }
-.visit.bg-art { --art: url('/images/backgrounds/watercolor-wash.jpg'); --art-opacity: 0.6; }
+/* Hoa sen là hoạ tiết chính; hoa/màu nước chỉ làm điểm nhấn (bg-cover) */
+.bg-art { --art: url('/images/backgrounds/lotus-pattern.jpg'); --art-opacity: 0.5; }
+.bg-art::before { background-size: 560px auto; background-repeat: repeat; background-position: top left; }
+.bg-art.bg-cover::before { background-size: cover; background-repeat: no-repeat; background-position: center; }
+#services.bg-art { --art-opacity: 0.55; }
+.look.bg-art { --art-fade: var(--porcelain); }
+.ritual.bg-art.bg-cover { --art: url('/images/backgrounds/blossoms.jpg'); --art-opacity: 0.4; }
+.visit.bg-art.bg-cover { --art: url('/images/backgrounds/watercolor-wash.jpg'); --art-opacity: 0.5; }
 
 /* Trang con */
-.gallery-page.bg-art { --art: url('/images/backgrounds/blossoms-corners.jpg'); --art-opacity: 0.55; }
-.contact-cards.bg-art { --art: url('/images/backgrounds/blossoms.jpg'); --art-opacity: 0.5; }
-.about.bg-art { --art: url('/images/backgrounds/watercolor-petals.jpg'); --art-opacity: 0.4; }
-.svc-detail.bg-art:nth-of-type(even) { --art: url('/images/backgrounds/watercolor-wash.jpg'); --art-opacity: 0.35; }
+.about.bg-art.bg-cover { --art: url('/images/backgrounds/blossoms-corners.jpg'); --art-opacity: 0.45; }
+.svc-detail.bg-art:nth-of-type(odd) { --art-opacity: 0.3; }
 
 /* Footer: hoạ tiết hoa sen lặp nhẹ */
-footer.bg-art { --art: url('/images/backgrounds/lotus-pattern.jpg'); --art-opacity: 0.6; }
-footer.bg-art::before { background-size: 520px auto; background-repeat: repeat; background-position: top left; }
+footer.bg-art { --art-opacity: 0.6; }
 
 @media (max-width: 700px) {
   .bg-art::before { --art-opacity: 0.35; }

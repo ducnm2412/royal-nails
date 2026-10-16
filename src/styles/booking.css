@@ -4,16 +4,16 @@
 .book .wrap { position: relative; display: grid; grid-template-columns: 5fr 7fr; gap: 4rem; align-items: start; }
 .book .kicker { color: var(--blush-deep); }
 .book .kicker::before { background: var(--blush-deep); }
-.book h2 { font-family: var(--display); font-size: clamp(2.6rem, 5vw, 4.4rem); color: var(--paper); }
+.book h2 { font-family: var(--display); font-weight: 600; font-size: clamp(2.4rem, 4.6vw, 3.8rem); color: var(--paper); }
 .book .side { display: flex; flex-direction: column; gap: 1.8rem; }
 .book .side p { color: var(--blush); max-width: 44ch; }
-.book .tel { font-family: var(--display); font-size: 2.4rem; color: #fff; text-decoration: none; letter-spacing: 0.04em; }
+.book .tel { font-family: var(--display); font-weight: 600; font-size: 2.2rem; color: #fff; text-decoration: none; letter-spacing: 0.04em; }
 .hours { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1.6rem; font-size: 0.95rem; font-variant-numeric: tabular-nums; border-top: 1px solid rgba(243, 211, 216, 0.3); padding-top: 1.2rem; margin: 0; }
 .hours dt { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blush-deep); padding-top: 0.2rem; }
 .hours dd { margin: 0; }
 
 .booking-form { background: var(--paper); color: var(--ink); padding: 2.4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; }
-.booking-form label { display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--wine); font-weight: 500; min-width: 0; }
+.booking-form label { display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--wine); font-weight: 600; min-width: 0; }
 .booking-form input, .booking-form select, .booking-form textarea {
   font: inherit; font-size: 1rem; font-weight: 300; padding: 0.75rem 0;
   border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink);

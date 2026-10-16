@@ -1,8 +1,8 @@
 footer { border-top: 1px solid var(--line); padding-block: 3rem 2rem; }
 footer .top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
-footer .big { font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4rem); color: var(--wine); line-height: 1; }
+footer .big { font-family: var(--display); font-weight: 600; font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--wine); line-height: 1; }
 footer .blurb { color: var(--muted); margin-top: 0.8rem; max-width: 34ch; font-size: 0.95rem; }
-footer h4 { font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--lotus); margin: 0 0 0.9rem; font-weight: 500; }
+footer h4 { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lotus); margin: 0 0 0.9rem; font-weight: 600; }
 footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.45rem; font-size: 0.95rem; color: var(--muted); }
 footer a { text-decoration: none; }
 footer a:hover { color: var(--wine); }
