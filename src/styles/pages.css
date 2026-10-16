@@ -1,0 +1,106 @@
+/* ===== Trang con: đầu trang dùng chung ===== */
+.page-head { position: relative; background: var(--night); color: var(--paper); padding-block: 4rem 3.5rem; overflow: hidden; }
+.page-head-bg { position: absolute; inset: 0; background: url('/images/brand/neon-sign.jpg') center 40% / cover no-repeat; opacity: 0.22; filter: saturate(1.1); }
+.page-head-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18, 10, 15, 0.5), rgba(18, 10, 15, 0.85)); }
+.page-head .wrap { position: relative; display: grid; gap: 1.2rem; }
+.page-head .kicker { color: var(--blush); }
+.page-head .kicker::before { background: var(--blush); }
+.page-head h1 { color: var(--paper); font-size: clamp(2.6rem, 6vw, 4.8rem); line-height: 1.02; }
+.page-head h1 .it { color: var(--lotus); }
+.page-head p { color: rgba(250, 243, 236, 0.78); max-width: 62ch; font-size: 1.02rem; }
+.nav .links a[aria-current='page'] { color: #fff; border-bottom: 1px solid var(--lotus); padding-bottom: 0.2rem; }
+
+/* ===== Services: thanh nhảy mục + từng dịch vụ ===== */
+.sub-nav { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 65px); z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
+.sub-nav .wrap { display: flex; gap: 1.6rem; overflow-x: auto; padding-block: 0.8rem; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; scrollbar-width: none; }
+.sub-nav .wrap::-webkit-scrollbar { display: none; }
+.sub-nav a { text-decoration: none; color: var(--muted); white-space: nowrap; }
+.sub-nav a:hover { color: var(--wine); }
+
+.svc-detail { padding-block: 4.5rem; border-bottom: 1px solid var(--line); scroll-margin-top: 120px; }
+.svc-detail .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 3.5rem; align-items: center; }
+.svc-detail.flip .ph { order: 2; }
+.svc-detail .ph { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--blush); }
+.svc-detail .ph img { object-fit: cover; }
+.svc-detail .ph .n { position: absolute; top: 1rem; left: 1rem; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--paper); background: var(--wine); width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; }
+.svc-detail h2 { font-size: clamp(2.2rem, 4vw, 3.4rem); }
+.svc-detail .intro { color: var(--muted); margin-top: 0.9rem; max-width: 56ch; }
+.price-list { list-style: none; margin: 1.8rem 0 2rem; padding: 0; display: grid; }
+.price-list li { display: grid; grid-template-columns: auto 1fr auto auto; align-items: baseline; gap: 0.9rem; padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
+.price-list .name { color: var(--ink); }
+.price-list .dots { border-bottom: 1px dotted var(--line); transform: translateY(-0.3em); }
+.price-list .time { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.price-list .price { font-family: var(--display); font-size: 1.25rem; color: var(--wine); min-width: 3.2rem; text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) {
+  .svc-detail .wrap { grid-template-columns: 1fr; gap: 2rem; }
+  .svc-detail.flip .ph { order: 0; }
+  .svc-detail .ph { max-width: 480px; }
+  .price-list .time { display: none; }
+}
+
+/* ===== Gallery: bộ lọc CSS-only + masonry ===== */
+.gallery-page { padding-block: 3rem 5rem; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+.filters input { position: absolute; opacity: 0; pointer-events: none; }
+.filters label { display: inline-block; padding: 0.55rem 1rem; border: 1px solid var(--line); border-radius: 999px; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--wine); cursor: pointer; transition: background 0.2s, color 0.2s; }
+.filters label:hover { background: var(--blush); }
+.filters input:checked + label { background: var(--wine); color: var(--paper); border-color: var(--wine); }
+.filters input:focus-visible + label { outline: 2px solid var(--lotus); outline-offset: 2px; }
+.masonry { columns: 4 240px; column-gap: 0.9rem; }
+.masonry figure { margin: 0 0 0.9rem; break-inside: avoid; position: relative; overflow: hidden; background: var(--blush); }
+.masonry img { width: 100%; height: auto; display: block; transition: transform 0.6s; }
+.masonry figure:hover img { transform: scale(1.03); }
+.masonry figcaption { position: absolute; left: 0; bottom: 0; padding: 0.45rem 0.75rem; font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--paper); background: var(--wine); }
+/* Ẩn ảnh không thuộc bộ lọc đang chọn */
+.gallery-page:has(#gf-nail-art:checked) .masonry figure:not([data-cat='nail-art']),
+.gallery-page:has(#gf-french:checked) .masonry figure:not([data-cat='french']),
+.gallery-page:has(#gf-chrome-aura:checked) .masonry figure:not([data-cat='chrome-aura']),
+.gallery-page:has(#gf-short-natural:checked) .masonry figure:not([data-cat='short-natural']),
+.gallery-page:has(#gf-pedicure:checked) .masonry figure:not([data-cat='pedicure']) { display: none; }
+
+/* ===== About ===== */
+.about { padding-block: 5rem 4rem; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+.about .ph.tall { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--night); }
+.about .ph img { object-fit: cover; }
+.story h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1.2rem; }
+.story p { color: var(--ink); margin-bottom: 1rem; max-width: 56ch; }
+.story p:last-child { color: var(--muted); font-family: var(--serif); font-style: italic; font-size: 1.15rem; }
+.values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
+.value { display: grid; grid-template-columns: 1.2rem 1fr; gap: 0.8rem; align-items: start; }
+.value .dot { color: var(--lotus); font-size: 1.2rem; margin-top: 0.15rem; }
+.value h3 { font-family: var(--display); font-size: 1.25rem; color: var(--wine); margin-bottom: 0.35rem; }
+.value p { color: var(--muted); font-size: 0.92rem; }
+.studio-strip { padding-block: 0 5rem; }
+.studio-strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; }
+.studio-strip figure { margin: 0; aspect-ratio: 1; overflow: hidden; background: var(--blush); }
+.studio-strip img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 860px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about .ph.tall { max-width: 480px; }
+  .values { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) { .values { grid-template-columns: 1fr; } .studio-strip .wrap { grid-template-columns: 1fr 1fr; } }
+
+/* ===== Contact ===== */
+.contact-cards { padding-block: 3.5rem 1rem; }
+.contact-cards .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.contact-cards .card { background: var(--porcelain); border: 1px solid var(--line); padding: 1.8rem; display: grid; gap: 0.9rem; align-content: start; }
+.contact-cards .card p { color: var(--muted); font-size: 0.92rem; }
+.big-link { font-family: var(--display); font-size: clamp(1.6rem, 2.4vw, 2.1rem); color: var(--wine); text-decoration: none; }
+.contact-cards .hours { border-top: 0; padding-top: 0; color: var(--ink); }
+.contact-cards .hours dt { color: var(--lotus); }
+.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
+.plain a { text-decoration: none; color: var(--ink); }
+.plain a:hover { color: var(--wine); }
+@media (max-width: 860px) { .contact-cards .wrap { grid-template-columns: 1fr; } }
+
+/* ===== CTA band ===== */
+.cta-band { position: relative; background: var(--wine); color: var(--paper); padding-block: 3.5rem; overflow: hidden; }
+.cta-band .bg { position: absolute; inset: 0; background: url('/images/brand/neon-sign.jpg') center / cover no-repeat; opacity: 0.12; mix-blend-mode: screen; }
+.cta-band .wrap { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
+.cta-band .kicker { color: var(--blush-deep); }
+.cta-band .kicker::before { background: var(--blush-deep); }
+.cta-band h2 { color: var(--paper); font-size: clamp(1.9rem, 3.5vw, 2.8rem); margin-top: 0.8rem; }
+.cta-band p { color: var(--blush); max-width: 48ch; margin-top: 0.6rem; }
+@media (max-width: 800px) { .cta-band .wrap { grid-template-columns: 1fr; } }

@@ -16,23 +16,24 @@ npm run build && npm start
 ```
 src/
   app/                    Routing & SEO files
-    layout.tsx            fonts, metadata, JSON-LD NailSalon, analytics
-    page.tsx              lắp ghép các section
+    layout.tsx            fonts, metadata, JSON-LD, Header/Footer/Lightbox dùng chung
+    page.tsx              trang chủ (lắp ghép các section)
+    services/ gallery/ about/ contact/ book/   các trang con
     globals.css           import Tailwind + src/styles/*
     sitemap.ts, robots.ts, opengraph-image.jpg
     api/booking/route.ts  nhận form đặt lịch (POST)
   components/
     layout/               Header, Footer, MobileCallBar (thanh Gọi/Đặt lịch trên mobile)
-    sections/             Hero, Services, Lookbook, Ritual, Booking, Visit
+    sections/             Hero, Services, Lookbook, Ritual, Booking, Visit, CtaBand
     motion/               HeroReveal (chuỗi neon khi tải), ScrollReveal (lộ dần khi cuộn)
-    ui/                   Lotus (SVG), SocialLinks, Year
+    ui/                   Lotus (SVG), SocialLinks, Year, PageHead, Lightbox
     analytics/            GA4 / Meta Pixel (bật qua .env)
   config/
     site.ts               THÔNG TIN DOANH NGHIỆP — sửa duy nhất ở đây
     seo.ts                metadata, viewport, JSON-LD
-  content/                dữ liệu hiển thị: services, lookbook, ritual, navigation
+  content/                dữ liệu hiển thị: services (+ menu giá), gallery, lookbook, ritual, about, navigation
   lib/gsap.ts             đăng ký plugin GSAP một lần
-  styles/                 tokens, base, header, hero, sections, booking, footer
+  styles/                 tokens, base, header, hero, sections, booking, footer, lightbox, pages
 public/images/
   brand/                  neon-sign.jpg, logo-lotus.png
   gallery/                nail-01..16.jpg
@@ -48,6 +49,18 @@ Tất cả nằm trong `src/config/site.ts` (các dòng có `TODO`):
 - `address`, `geo`, `mapsUrl`, `mapsEmbedUrl` — địa chỉ & link Google Maps (Share > Embed a map)
 - `hours` / `hoursShort` — giờ mở cửa
 - `social` — Facebook, Instagram, TikTok, Yelp
+- Giá dịch vụ trong `src/content/services.ts` (`serviceDetails`) đang là tạm, cần khách xác nhận
+
+## Các trang
+
+| Route | Nội dung |
+|---|---|
+| `/` | Hero neon, dịch vụ, lookbook, quy trình, form đặt lịch, bản đồ |
+| `/services` | Menu giá 6 dịch vụ, thanh nhảy mục, nút đặt lịch chọn sẵn dịch vụ |
+| `/gallery` | Toàn bộ ảnh, bộ lọc theo kiểu (CSS-only), click mở lightbox |
+| `/about` | Câu chuyện, 4 giá trị, quy trình, ảnh studio |
+| `/contact` | Gọi/giờ mở cửa/mạng xã hội, bản đồ Google Maps |
+| `/book` | Form đặt lịch, nhận `?service=` để chọn sẵn |
 
 ## Form đặt lịch
 

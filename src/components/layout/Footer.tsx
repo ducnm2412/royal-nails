@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import { site } from '@/config/site';
 import { services } from '@/content/services';
+import { navLinks, BOOK_PATH } from '@/content/navigation';
 import { SocialLinks } from '@/components/ui/SocialLinks';
 import { Year } from '@/components/ui/Year';
 
@@ -20,7 +22,7 @@ export function Footer() {
             <ul>
               {services.map((s) => (
                 <li key={s.slug}>
-                  <a href="#services">{s.name}</a>
+                  <Link href={`/services#${s.slug}`}>{s.name}</Link>
                 </li>
               ))}
             </ul>
@@ -28,16 +30,22 @@ export function Footer() {
           <div>
             <h4>Studio</h4>
             <ul>
-              <li><a href="#lookbook">Lookbook</a></li>
-              <li><a href="#ritual">The Ritual</a></li>
-              <li><a href="#book">Reservations</a></li>
-              <li><a href="#visit">Visit</a></li>
+              {navLinks.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href}>{l.label}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href={BOOK_PATH}>Book</Link>
+              </li>
             </ul>
           </div>
           <div className="contact">
             <h4>Contact</h4>
             <ul>
-              <li><a href={site.phoneHref}>{site.phoneDisplay}</a></li>
+              <li>
+                <a href={site.phoneHref}>{site.phoneDisplay}</a>
+              </li>
               <li>
                 {site.address.street}
                 <br />

@@ -1,6 +1,10 @@
 import { Italiana, Cormorant_Garamond, Figtree, Pinyon_Script } from 'next/font/google';
 import { localBusinessJsonLd } from '@/config/seo';
 import { LotusSymbol } from '@/components/ui/Lotus';
+import { Lightbox } from '@/components/ui/Lightbox';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { MobileCallBar } from '@/components/layout/MobileCallBar';
 import { Analytics } from '@/components/analytics/Analytics';
 import './globals.css';
 
@@ -22,7 +26,11 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     <html lang="en" className={`${italiana.variable} ${cormorant.variable} ${figtree.variable} ${pinyon.variable}`}>
       <body>
         <LotusSymbol />
-        {children}
+        <Header />
+        <main id="top">{children}</main>
+        <Footer />
+        <MobileCallBar />
+        <Lightbox />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd).replace(/</g, '\\u003c') }}

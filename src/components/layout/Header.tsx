@@ -1,23 +1,32 @@
-import { navLinks } from '@/content/navigation';
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { navLinks, BOOK_PATH } from '@/content/navigation';
 
 export function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="nav">
       <div className="wrap">
-        <a className="logo" href="#top" aria-label="Royal Nail Store, back to top">
+        <Link className="logo" href="/" aria-label="Royal Nail Store, home">
           Royal
-        </a>
-        <nav className="links" aria-label="Sections">
-          {navLinks.map((l) => (
-            <a key={l.href} href={l.href}>
-              {l.label}
-            </a>
-          ))}
+        </Link>
+        <nav className="links" aria-label="Main">
+          {navLinks.map((l) => {
+            const active = l.href === '/' ? pathname === '/' : pathname.startsWith(l.href);
+            return (
+              <Link key={l.href} href={l.href} aria-current={active ? 'page' : undefined}>
+                {l.label}
+              </Link>
+            );
+          })}
         </nav>
         <div className="cta">
-          <a className="btn solid" href="#book">
+          <Link className="btn solid" href={BOOK_PATH}>
             Book
-          </a>
+          </Link>
         </div>
       </div>
     </header>

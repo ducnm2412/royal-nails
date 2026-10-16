@@ -7,9 +7,14 @@ export const heroStrip = [
   { src: '/images/gallery/nail-01.jpg', alt: 'Navy nails with gold stars', w: 1280, h: 1920 },
 ];
 
+/** Menu chính — dùng cho Header (active theo pathname) và Footer. */
 export const navLinks = [
-  { href: '#services', label: 'Services' },
-  { href: '#lookbook', label: 'Lookbook' },
-  { href: '#ritual', label: 'The Ritual' },
-  { href: '#visit', label: 'Visit' },
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ];
+
+/** Giá trị cho tham số ?service= trên /book, khớp với bookingServiceOptions. */
+export const BOOK_PATH = '/book';

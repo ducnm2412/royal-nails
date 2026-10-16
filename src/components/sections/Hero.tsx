@@ -1,6 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { heroStrip, BOOK_PATH } from '@/content/navigation';
 import { site } from '@/config/site';
-import { heroStrip } from '@/content/navigation';
 import { HeroReveal } from '@/components/motion/HeroReveal';
 
 export function Hero() {
@@ -20,9 +21,9 @@ export function Hero() {
               Walk in polished, walk out royal.
             </p>
             <div className="hero-ctas">
-              <a className="btn light solid pill" href="#book">
+              <Link className="btn light solid pill" href={BOOK_PATH}>
                 Book an appointment
-              </a>
+              </Link>
               <a className="btn light pill" href={site.phoneHref}>
                 Call {site.phoneDisplay}
               </a>

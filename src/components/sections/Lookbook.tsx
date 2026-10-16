@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { site } from '@/config/site';
 import { lookbook } from '@/content/lookbook';
 
@@ -45,9 +46,14 @@ export function Lookbook() {
         </div>
         <div className="look-foot">
           <p>Follow along for new sets every week.</p>
-          <a className="btn" href={site.social.instagram} target="_blank" rel="noopener noreferrer">
-            Instagram
-          </a>
+          <div className="btns">
+            <Link className="btn solid" href="/gallery">
+              See the gallery
+            </Link>
+            <a className="btn" href={site.social.instagram} target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+          </div>
         </div>
       </div>
     </section>

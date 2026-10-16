@@ -9,7 +9,7 @@ type Status = 'idle' | 'sending' | 'sent' | 'error';
 const noop = () => () => {};
 const todayISO = () => new Date().toISOString().slice(0, 10);
 
-export function Booking() {
+export function Booking({ preselect }: { preselect?: string }) {
   const [status, setStatus] = useState<Status>('idle');
   const [message, setMessage] = useState('');
   // Ngày tối thiểu chỉ tính ở client để prerender tĩnh không phụ thuộc Date.
@@ -87,7 +87,7 @@ export function Booking() {
           </label>
           <label className="h">
             Service
-            <select name="service" required defaultValue="">
+            <select name="service" required defaultValue={preselect && bookingServiceOptions.includes(preselect) ? preselect : ''}>
               <option value="">Choose a service</option>
               {bookingServiceOptions.map((o) => (
                 <option key={o}>{o}</option>

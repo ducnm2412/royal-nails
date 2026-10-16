@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { services } from '@/content/services';
 
 export function Services() {
@@ -35,13 +36,19 @@ export function Services() {
                 />
                 <span className="n" aria-hidden="true">{s.num}</span>
               </div>
-              <a className="row" href="#book">
+              <Link className="row" href={`/services#${s.slug}`}>
                 <h3>{s.name}</h3>
                 <span>{s.time}</span>
-              </a>
+              </Link>
               <p>{s.text}</p>
             </article>
           ))}
+        </div>
+        <div className="look-foot" data-reveal>
+          <p>Starting prices and add-ons for every service.</p>
+          <Link className="btn" href="/services">
+            Full menu &amp; prices
+          </Link>
         </div>
       </div>
     </section>
