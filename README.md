@@ -23,9 +23,9 @@ src/
     sitemap.ts, robots.ts, opengraph-image.jpg
     api/booking/route.ts  nhận form đặt lịch (POST)
   components/
-    layout/               Header, Footer, MobileCallBar (thanh Gọi/Đặt lịch trên mobile)
+    layout/               Header (dropdown Services + menu mobile), Footer, MobileCallBar
     sections/             Hero, Services, Lookbook, Ritual, Booking, Visit, CtaBand
-    motion/               HeroReveal (chuỗi neon khi tải), ScrollReveal (lộ dần khi cuộn)
+    motion/               HeroReveal (neon khi tải), ScrollReveal (lộ dần), PageMotion (header ẩn/hiện, parallax, sub-nav)
     ui/                   Lotus (SVG), SocialLinks, Year, PageHead, Lightbox
     analytics/            GA4 / Meta Pixel (bật qua .env)
   config/
@@ -77,4 +77,5 @@ Nối với email (Resend / SendGrid), SMS (Twilio) hoặc Square Appointments /
 
 - `HeroReveal`: một timeline khi tải trang (bảng hiệu neon bật sáng, dải ảnh xòe lên)
 - `ScrollReveal`: `ScrollTrigger.batch` cho mọi phần tử `[data-reveal]`, parallax nhẹ ở ảnh Ritual
-- Cả hai bọc trong `gsap.matchMedia('(prefers-reduced-motion: no-preference)')`; không JS vẫn thấy đủ nội dung
+- `PageMotion` (layout, mọi trang): header tự ẩn khi cuộn xuống và hiện khi cuộn lên, parallax nền đầu trang / ảnh `[data-parallax]` / CTA band, thanh mục dịch vụ tự tô sáng mục đang xem
+- Tất cả bọc trong `gsap.matchMedia('(prefers-reduced-motion: no-preference)')`; không JS vẫn thấy đủ nội dung

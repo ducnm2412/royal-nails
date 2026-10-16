@@ -1,6 +1,6 @@
 /* ===== Trang con: đầu trang dùng chung ===== */
 .page-head { position: relative; background: var(--night); color: var(--paper); padding-block: 4rem 3.5rem; overflow: hidden; }
-.page-head-bg { position: absolute; inset: 0; background: url('/images/brand/neon-sign.jpg') center 40% / cover no-repeat; opacity: 0.22; filter: saturate(1.1); }
+.page-head-bg { position: absolute; inset: -12% 0; background: url('/images/brand/neon-sign.jpg') center 40% / cover no-repeat; opacity: 0.22; filter: saturate(1.1); }
 .page-head-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18, 10, 15, 0.5), rgba(18, 10, 15, 0.85)); }
 .page-head .wrap { position: relative; display: grid; gap: 1.2rem; }
 .page-head .kicker { color: var(--blush); }
@@ -16,25 +16,30 @@
 .sub-nav .wrap::-webkit-scrollbar { display: none; }
 .sub-nav a { text-decoration: none; color: var(--muted); white-space: nowrap; }
 .sub-nav a:hover { color: var(--wine); }
+.sub-nav a.is-active { color: var(--wine); border-bottom: 1px solid var(--lotus); padding-bottom: 0.15rem; }
 
-.svc-detail { padding-block: 4.5rem; border-bottom: 1px solid var(--line); scroll-margin-top: 120px; }
-.svc-detail .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 3.5rem; align-items: center; }
+/* Mỗi dịch vụ gọn trong ~2/3 màn hình: ảnh 340px, nội dung tối đa 980px */
+.svc-detail { padding-block: 3rem; border-bottom: 1px solid var(--line); scroll-margin-top: 120px; }
+.svc-detail .wrap { display: grid; grid-template-columns: 340px 1fr; gap: 3rem; align-items: center; max-width: 1000px; }
+.svc-detail.flip .wrap { grid-template-columns: 1fr 340px; }
 .svc-detail.flip .ph { order: 2; }
 .svc-detail .ph { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--blush); }
+.svc-detail .ph.square { aspect-ratio: 1 / 1; }
 .svc-detail .ph img { object-fit: cover; }
+.svc-detail .ph[data-parallax] img { height: 118% !important; top: -9% !important; }
 .svc-detail .ph .n { position: absolute; top: 1rem; left: 1rem; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--paper); background: var(--wine); width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; }
-.svc-detail h2 { font-size: clamp(2.2rem, 4vw, 3.4rem); }
-.svc-detail .intro { color: var(--muted); margin-top: 0.9rem; max-width: 56ch; }
-.price-list { list-style: none; margin: 1.8rem 0 2rem; padding: 0; display: grid; }
-.price-list li { display: grid; grid-template-columns: auto 1fr auto auto; align-items: baseline; gap: 0.9rem; padding: 0.75rem 0; border-bottom: 1px solid var(--line); }
+.svc-detail h2 { font-size: clamp(2rem, 3.2vw, 2.8rem); }
+.svc-detail .intro { color: var(--muted); margin-top: 0.7rem; max-width: 56ch; font-size: 0.95rem; }
+.price-list { list-style: none; margin: 1.4rem 0 1.6rem; padding: 0; display: grid; }
+.price-list li { display: grid; grid-template-columns: auto 1fr auto auto; align-items: baseline; gap: 0.9rem; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
 .price-list .name { color: var(--ink); }
 .price-list .dots { border-bottom: 1px dotted var(--line); transform: translateY(-0.3em); }
 .price-list .time { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-.price-list .price { font-family: var(--display); font-size: 1.25rem; color: var(--wine); min-width: 3.2rem; text-align: right; font-variant-numeric: tabular-nums; }
+.price-list .price { font-family: var(--display); font-size: 1.15rem; color: var(--wine); min-width: 3.2rem; text-align: right; font-variant-numeric: tabular-nums; }
 @media (max-width: 860px) {
-  .svc-detail .wrap { grid-template-columns: 1fr; gap: 2rem; }
+  .svc-detail .wrap, .svc-detail.flip .wrap { grid-template-columns: 1fr; gap: 2rem; }
   .svc-detail.flip .ph { order: 0; }
-  .svc-detail .ph { max-width: 480px; }
+  .svc-detail .ph { max-width: 400px; }
   .price-list .time { display: none; }
 }
 
@@ -60,8 +65,15 @@
 /* ===== About ===== */
 .about { padding-block: 5rem 4rem; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
-.about .ph.tall { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--night); }
-.about .ph img { object-fit: cover; }
+.collage { position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 1rem; padding-bottom: 1.5rem; }
+.collage figure { margin: 0; overflow: hidden; background: var(--blush); border: 6px solid var(--porcelain); box-shadow: 0 18px 40px rgba(46, 27, 34, 0.14); }
+.collage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.collage .c-neon { grid-column: 1 / -1; aspect-ratio: 3 / 2; transform: rotate(-1.2deg); }
+.collage .c-a { aspect-ratio: 1; transform: rotate(1.5deg) translateY(-0.4rem); }
+.collage .c-b { aspect-ratio: 1; transform: rotate(-2deg) translateY(0.3rem); }
+.collage figure { transition: transform 0.4s; }
+.collage figure:hover { transform: rotate(0) scale(1.02); z-index: 1; }
+.c-badge { position: absolute; right: -0.5rem; top: 42%; background: var(--wine); color: var(--paper); font-family: var(--serif); font-style: italic; font-size: 1.05rem; padding: 0.55rem 1rem; transform: rotate(4deg); box-shadow: 0 10px 24px rgba(46, 27, 34, 0.2); }
 .story h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1.2rem; }
 .story p { color: var(--ink); margin-bottom: 1rem; max-width: 56ch; }
 .story p:last-child { color: var(--muted); font-family: var(--serif); font-style: italic; font-size: 1.15rem; }
@@ -76,7 +88,7 @@
 .studio-strip img { width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 860px) {
   .about-grid { grid-template-columns: 1fr; }
-  .about .ph.tall { max-width: 480px; }
+  .collage { max-width: 520px; }
   .values { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) { .values { grid-template-columns: 1fr; } .studio-strip .wrap { grid-template-columns: 1fr 1fr; } }
@@ -96,7 +108,7 @@
 
 /* ===== CTA band ===== */
 .cta-band { position: relative; background: var(--wine); color: var(--paper); padding-block: 3.5rem; overflow: hidden; }
-.cta-band .bg { position: absolute; inset: 0; background: url('/images/brand/neon-sign.jpg') center / cover no-repeat; opacity: 0.12; mix-blend-mode: screen; }
+.cta-band .bg { position: absolute; inset: -20% 0; background: url('/images/brand/neon-sign.jpg') center / cover no-repeat; opacity: 0.12; mix-blend-mode: screen; }
 .cta-band .wrap { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
 .cta-band .kicker { color: var(--blush-deep); }
 .cta-band .kicker::before { background: var(--blush-deep); }

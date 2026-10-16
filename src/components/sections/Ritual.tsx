@@ -5,7 +5,7 @@ export function Ritual() {
   return (
     <section id="ritual" className="ritual" aria-labelledby="ritual-title">
       <div className="wrap">
-        <div className="ph" data-reveal>
+        <div className="ph" data-reveal data-parallax>
           <Image
             src="/images/gallery/nail-04.jpg"
             alt="Hand with pink floral stiletto nails and gold rings"

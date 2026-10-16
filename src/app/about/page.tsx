@@ -27,14 +27,27 @@ export default function AboutPage() {
         <section className="about" aria-labelledby="story-title">
           <div className="wrap">
             <div className="about-grid">
-              <div className="ph tall" data-reveal>
-                <Image
-                  src="/images/brand/neon-sign.jpg"
-                  alt="Royal Nails & Spa neon sign with pink lotus"
-                  fill
-                  quality={90}
-                  sizes="(max-width: 860px) 100vw, 50vw"
-                />
+              {/* Collage: bảng hiệu neon đúng tỉ lệ 3:2 + hai bộ móng, viền giấy như ảnh dán album */}
+              <div className="collage" data-reveal>
+                <figure className="c-neon">
+                  <Image
+                    src="/images/brand/neon-sign.jpg"
+                    alt="Royal Nails & Spa neon sign with pink lotus"
+                    width={1200}
+                    height={800}
+                    quality={90}
+                    sizes="(max-width: 860px) 100vw, 520px"
+                    data-lightbox="/images/brand/neon-sign.jpg"
+                    data-caption="The Royal neon sign"
+                  />
+                </figure>
+                <figure className="c-a">
+                  <Image src="/images/gallery/nail-06.jpg" alt="Iridescent pink nails with red hearts" width={1600} height={1600} quality={90} sizes="240px" data-lightbox="/images/gallery/nail-06.jpg" />
+                </figure>
+                <figure className="c-b">
+                  <Image src="/images/gallery/nail-10.jpg" alt="Black French tip almond nails" width={1344} height={1728} quality={90} sizes="240px" data-lightbox="/images/gallery/nail-10.jpg" />
+                </figure>
+                <span className="c-badge">Est. Ventura</span>
               </div>
               <div className="story" data-reveal>
                 <h2 className="display" id="story-title">Our story</h2>

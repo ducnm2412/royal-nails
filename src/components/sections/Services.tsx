@@ -29,6 +29,7 @@ export function Services() {
                   src={s.img}
                   alt={s.alt}
                   fill
+                  style={{ objectPosition: s.pos }}
                   quality={90}
                   sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 420px"
                   data-lightbox={s.img}

@@ -36,11 +36,12 @@ export default function ServicesPage() {
         {serviceDetails.map((s, i) => (
           <section className={`svc-detail${i % 2 ? ' flip' : ''}`} id={s.slug} key={s.slug} aria-labelledby={`${s.slug}-title`}>
             <div className="wrap">
-              <div className="ph" data-reveal>
+              <div className={`ph${s.square ? ' square' : ''}`} data-reveal data-parallax>
                 <Image
                   src={s.img}
                   alt={s.alt}
                   fill
+                  style={{ objectPosition: s.pos }}
                   quality={90}
                   sizes="(max-width: 860px) 100vw, 520px"
                   data-lightbox={s.img}

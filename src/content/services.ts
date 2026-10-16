@@ -6,6 +6,10 @@ export type Service = {
   img: string;
   alt: string;
   text: string;
+  /** Vị trí cắt ảnh (object-position), mặc định center. Dùng khi ảnh ngang đặt trong khung dọc. */
+  pos?: string;
+  /** Khung vuông thay vì 4:5 cho ảnh ngang. */
+  square?: boolean;
 };
 
 /** 6 dịch vụ chính theo brief. Số La Mã là thứ tự trên menu. */
@@ -26,6 +30,8 @@ export const services: Service[] = [
     time: '45 – 75 min',
     img: '/images/gallery/nail-15.jpg',
     alt: 'Brown and copper almond nails with a glitter accent',
+    pos: '50% 12%',
+    square: true,
     text: 'Warm soak, exfoliation, callus care and a massage you will want to stretch out.',
   },
   {

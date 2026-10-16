@@ -40,6 +40,7 @@
 .ritual .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 4rem; align-items: center; }
 .ritual .ph { position: relative; aspect-ratio: 4 / 5; overflow: hidden; }
 .ritual .ph img { width: 100%; height: 100%; object-fit: cover; }
+.ritual .ph[data-parallax] img { height: 118% !important; top: -9% !important; }
 .ritual .ph .badge { position: absolute; right: -1px; bottom: 2rem; background: var(--paper); color: var(--wine); padding: 0.9rem 1.2rem; font-family: var(--serif); font-style: italic; font-size: 1.2rem; border: 1px solid var(--line); border-right: 0; }
 .ritual h2 { font-family: var(--display); color: var(--wine); font-size: clamp(2.4rem, 5vw, 4.2rem); margin-top: 1rem; }
 .steps { display: grid; border-top: 1px solid var(--line); margin-top: 2.5rem; }

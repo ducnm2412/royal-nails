@@ -22,13 +22,6 @@ export function ScrollReveal({ children }: { children: ReactNode }) {
           once: true,
           onEnter: (batch) => gsap.to(batch, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.1, ease: 'power3.out', overwrite: true }),
         });
-
-        // Ảnh phần Ritual trôi chậm hơn nội dung (parallax nhẹ)
-        gsap.to('.ritual .ph img', {
-          yPercent: 8,
-          ease: 'none',
-          scrollTrigger: { trigger: '.ritual', start: 'top bottom', end: 'bottom top', scrub: true },
-        });
       });
       return () => mm.revert();
     },
