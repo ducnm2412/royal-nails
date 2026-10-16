@@ -53,30 +53,31 @@
 /* Ngăn kéo menu điện thoại */
 .drawer {
   display: none; position: fixed; inset: calc(env(safe-area-inset-top, 0px) + 65px) 0 0; background: var(--night); color: var(--paper);
-  padding: 1.5rem var(--gr) calc(1.5rem + env(safe-area-inset-bottom, 0px)) var(--gl);
-  overflow-y: auto; flex-direction: column; justify-content: space-between; gap: 2rem;
+  padding: 0.6rem var(--gr) calc(1rem + env(safe-area-inset-bottom, 0px)) var(--gl);
+  overflow-y: auto; flex-direction: column; justify-content: flex-start; gap: 1.2rem;
   opacity: 0; transform: translateY(-8px); transition: opacity 0.3s, transform 0.3s;
 }
 .drawer.is-open { opacity: 1; transform: none; }
 .drawer nav { display: grid; }
-.drawer nav > a, .drawer-row a { font-family: var(--display); font-size: 2rem; color: var(--paper); text-decoration: none; padding: 0.7rem 0; border-bottom: 1px solid rgba(243, 211, 216, 0.15); display: block; }
+.drawer nav > a, .drawer-row a { font-family: var(--display); font-size: 1.35rem; color: var(--paper); text-decoration: none; padding: 0.55rem 0; border-bottom: 1px solid rgba(243, 211, 216, 0.15); display: block; }
 .drawer nav a[aria-current='page'] { color: var(--lotus); }
 .drawer-row { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(243, 211, 216, 0.15); }
 .drawer-row a { border-bottom: 0; flex: 1; }
-.drawer-toggle { width: 44px; height: 44px; border: 1px solid rgba(243, 211, 216, 0.35); border-radius: 50%; background: transparent; color: var(--paper); display: grid; place-items: center; cursor: pointer; }
-.drawer-toggle svg { width: 14px; height: 14px; transition: transform 0.25s; }
+.drawer-toggle { width: 34px; height: 34px; border: 1px solid rgba(243, 211, 216, 0.35); border-radius: 50%; background: transparent; color: var(--paper); display: grid; place-items: center; cursor: pointer; }
+.drawer-toggle svg { width: 12px; height: 12px; transition: transform 0.25s; }
 .drawer-toggle.is-open svg { transform: rotate(180deg); }
-.drawer-sub { display: grid; grid-template-columns: 1fr 1fr; gap: 0.2rem 0.8rem; padding: 0.6rem 0 1rem; border-bottom: 1px solid rgba(243, 211, 216, 0.15); }
+.drawer-sub { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.8rem; padding: 0.3rem 0 0.6rem; border-bottom: 1px solid rgba(243, 211, 216, 0.15); }
 .drawer-sub[hidden] { display: none; }
-.drawer-sub .mega-item { grid-template-columns: 48px 1fr; padding: 0.4rem 0 !important; color: var(--paper) !important; }
+.drawer-sub .mega-item { grid-template-columns: 36px 1fr; gap: 0.6rem; padding: 0.3rem 0 !important; color: var(--paper) !important; }
 .drawer-sub .mega-item:hover { background: transparent; }
-.drawer-sub .mega-item .thumb { width: 48px; height: 48px; }
-.drawer-sub .mega-item strong { color: var(--paper); font-size: 1.05rem; }
+.drawer-sub .mega-item .thumb { width: 36px; height: 36px; }
+.drawer-sub .mega-item strong { color: var(--paper); font-size: 0.95rem; }
+.drawer-sub .mega-item small { font-size: 0.6rem; }
 .drawer-sub .mega-item small { color: var(--blush-deep); }
-.drawer-foot { display: grid; gap: 0.7rem; }
-.drawer-foot .btn { justify-content: center; border-color: var(--paper); color: var(--paper); }
+.drawer-foot { display: grid; gap: 0.5rem; margin-top: 0.4rem; }
+.drawer-foot .btn { justify-content: center; border-color: var(--paper); color: var(--paper); padding: 0.75rem 1rem; font-size: 0.72rem; }
 .drawer-foot .btn.solid { background: var(--paper); color: var(--wine); }
-.drawer-foot small { color: rgba(250, 243, 236, 0.6); font-size: 0.85rem; text-align: center; }
+.drawer-foot small { color: rgba(250, 243, 236, 0.6); font-size: 0.78rem; text-align: center; }
 
 @media (max-width: 860px) {
   .nav .links { display: none; }
@@ -85,7 +86,7 @@
   .drawer { display: flex; pointer-events: none; }
   .drawer.is-open { pointer-events: auto; }
 }
-@media (max-width: 400px) { .drawer-sub { grid-template-columns: 1fr; } }
+@media (max-width: 340px) { .drawer-sub { grid-template-columns: 1fr; } }
 
 /* Thanh Gọi / Đặt lịch cố định trên điện thoại */
 .callbar { display: none; }
