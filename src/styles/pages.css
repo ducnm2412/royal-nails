@@ -102,7 +102,7 @@
 .contact-cards .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 .contact-cards .card { background: var(--porcelain); border: 1px solid var(--line); padding: 1.8rem; display: grid; gap: 0.9rem; align-content: start; }
 .contact-cards .card p { color: var(--muted); font-size: 0.92rem; }
-.big-link { font-family: var(--display); font-size: clamp(1.6rem, 2.4vw, 2.1rem); color: var(--wine); text-decoration: none; }
+.big-link { font-family: var(--sans); font-weight: 600; font-size: clamp(1.5rem, 2.2vw, 1.9rem); color: var(--wine); text-decoration: none; font-variant-numeric: lining-nums tabular-nums; }
 .contact-cards .hours { border-top: 0; padding-top: 0; color: var(--ink); }
 .contact-cards .hours dt { color: var(--lotus); }
 .plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.4rem; }
