@@ -6,7 +6,7 @@ import { gsap, ScrollTrigger, useGSAP } from '@/lib/gsap';
 
 /**
  * Hiệu ứng cuộn dùng chung cho mọi trang (gsap-scrolltrigger):
- *  - Header tự ẩn khi cuộn xuống, hiện lại khi cuộn lên (ScrollTrigger.create + direction)
+ *  - Header trong suốt trên hero, có nền đêm khi cuộn (luôn hiển thị)
  *  - Nền đầu trang con và CTA band trôi parallax (scrub)
  *  - Ảnh có [data-parallax] trôi chậm hơn nội dung
  *  - Thanh mục dịch vụ (.sub-nav) tự tô sáng mục đang xem (toggleClass)
@@ -23,19 +23,10 @@ export function PageMotion() {
 
         // 1. Header ẩn/hiện theo hướng cuộn
         if (nav) {
-          ScrollTrigger.create({
-            start: 160,
-            end: 'max',
-            onUpdate: (self) => {
-              const hide = self.direction === 1 && self.scroll() > 160;
-              nav.classList.toggle('is-hidden', hide);
-            },
-            onLeaveBack: () => nav.classList.remove('is-hidden'),
-          });
-          // Trong suốt ở đầu trang, nền đêm khi cuộn
-          const solid = () => nav.classList.toggle('is-solid', window.scrollY > 40);
-          solid();
-          ScrollTrigger.create({ start: 0, end: 'max', onUpdate: solid });
+          // Navbar luôn hiện: trong suốt trên hero, nền đêm khi đã cuộn
+          const sync = () => nav.classList.toggle('is-solid', window.scrollY > 40);
+          sync();
+          ScrollTrigger.create({ start: 0, end: 'max', onUpdate: sync, onLeaveBack: sync });
         }
 
         // 2. Parallax nền đầu trang con
@@ -95,7 +86,7 @@ export function PageMotion() {
 
   // Đổi trang: cuộn về đầu và bảo đảm header hiện
   useEffect(() => {
-    document.querySelector('.nav')?.classList.remove('is-hidden');
+    document.querySelector('.nav')?.classList.toggle('is-solid', window.scrollY > 40);
   }, [pathname]);
 
   return null;

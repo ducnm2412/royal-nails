@@ -78,5 +78,5 @@ Nối với email (Resend / SendGrid), SMS (Twilio) hoặc Square Appointments /
 
 - `HeroReveal`: một timeline khi tải trang (bảng hiệu neon bật sáng, dải ảnh xòe lên)
 - `ScrollReveal`: `ScrollTrigger.batch` cho mọi phần tử `[data-reveal]`, parallax nhẹ ở ảnh Ritual
-- `PageMotion` (layout, mọi trang): header tự ẩn khi cuộn xuống và hiện khi cuộn lên, parallax nền đầu trang / ảnh `[data-parallax]` / CTA band, thanh mục dịch vụ tự tô sáng mục đang xem
+- `PageMotion` (layout, mọi trang): header trong suốt trên hero và có nền đêm khi cuộn, parallax nền đầu trang / ảnh `[data-parallax]` / CTA band, thanh mục dịch vụ tự tô sáng mục đang xem
 - Tất cả bọc trong `gsap.matchMedia('(prefers-reduced-motion: no-preference)')`; không JS vẫn thấy đủ nội dung

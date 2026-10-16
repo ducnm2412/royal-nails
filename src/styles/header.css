@@ -1,19 +1,12 @@
 /* Header tối, logo chữ neon */
-/* Navbar nổi đè lên hero: trong suốt ở đầu trang, chuyển nền đêm khi cuộn (.is-solid do PageMotion gắn) */
-:root { --nav-h: 104px; }
-.nav { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 15; background: transparent; padding-top: 14px; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), padding 0.35s, background 0.35s; }
-/* Thanh menu dạng viên thuốc kính mờ, nổi trên hero */
-.nav .wrap { background: rgba(255, 244, 246, 0.06); border: 1px solid rgba(243, 211, 216, 0.18); border-radius: 999px; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35); padding-inline: 1.2rem 0.6rem; transition: background 0.35s, border-color 0.35s, border-radius 0.35s, box-shadow 0.35s; }
-.nav.is-solid { padding-top: 0; }
-.nav.is-solid .wrap, .menu-open .nav .wrap { background: rgba(18, 10, 15, 0.92); border-color: transparent; border-radius: 0 0 22px 22px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); }
-.nav.is-hidden { transform: translateY(-100%); }
-.nav.is-hidden ~ * .sub-nav { top: env(safe-area-inset-top, 0px); }
+:root { --nav-h: 92px; }
+/* Navbar trong suốt nằm đè lên hero, luôn hiển thị; khi cuộn thì có nền đêm (.is-solid do PageMotion gắn) */
+.nav { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 15; background: transparent; border-bottom: 1px solid transparent; transition: background 0.35s, border-color 0.35s; }
+.nav.is-solid, .menu-open .nav { background: rgba(18, 10, 15, 0.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom-color: rgba(243, 211, 216, 0.15); }
 .sub-nav { top: calc(env(safe-area-inset-top, 0px) + var(--nav-h)) !important; }
-.sub-nav { transition: top 0.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
-.menu-open .nav.is-hidden { transform: none; }
 .menu-open body { overflow: hidden; }
 
-.nav .wrap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; padding-block: 0.6rem; gap: 1.5rem; }
+.nav .wrap { display: grid; grid-template-columns: auto 1fr auto; align-items: center; padding-block: 0.8rem; gap: 1.5rem; }
 .nav .links { display: flex; justify-content: center; gap: 2rem; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
 .nav .links a { text-decoration: none; color: rgba(255, 244, 246, 0.9); display: inline-flex; align-items: center; gap: 0.35rem; padding-block: 0.4rem; }
 .nav .links a:hover { color: #fff; }
@@ -30,7 +23,7 @@
 /* Dropdown Services (desktop, mở khi hover / focus) */
 .has-menu { position: relative; }
 .mega {
-  position: absolute; top: calc(100% + 1rem); left: 50%; transform: translate(-50%, 8px);
+  position: absolute; top: calc(100% + 0.6rem); left: 50%; transform: translate(-50%, 8px);
   width: 560px; padding: 1rem; background: var(--paper); color: var(--ink); border: 1px solid var(--line);
   box-shadow: 0 30px 60px rgba(18, 10, 15, 0.35);
   display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem 1rem;
@@ -90,8 +83,6 @@
 .drawer-foot small { color: rgba(250, 243, 236, 0.6); font-size: 0.78rem; text-align: center; }
 
 @media (max-width: 860px) {
-  .nav { padding-top: 8px; }
-  .nav .wrap { padding-inline: 0.9rem 0.5rem; }
   .nav .links { display: none; }
   .nav .wrap { grid-template-columns: 1fr auto; }
   .burger { display: grid; }
