@@ -23,19 +23,20 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; line-height: 1.05; text-wrap: bala
 .kicker { font-size: 0.74rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--lotus); font-weight: 600; display: flex; align-items: center; gap: 0.8rem; }
 .kicker::before { content: ''; width: 28px; height: 1px; background: var(--lotus); }
 
+/* Nút: viên thuốc bo tròn. .solid = hồng sen chữ trắng có bóng (nút chính); mặc định = viền (nút phụ) */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
-  padding: 1rem 1.8rem;
-  font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
-  text-decoration: none; border: 1px solid var(--wine); color: var(--wine); background: transparent; cursor: pointer;
-  transition: background 0.25s, color 0.25s, border-color 0.25s;
+  padding: 1.1rem 2.1rem; border-radius: 999px;
+  font-family: var(--sans); font-size: 0.86rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700;
+  text-decoration: none; border: 1.5px solid var(--lotus); color: var(--wine); background: transparent; cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.2s;
 }
-.btn:hover { background: var(--wine); color: var(--paper); }
-.btn.solid { background: var(--wine); color: var(--paper); }
-.btn.solid:hover { background: var(--wine-ink); border-color: var(--wine-ink); }
-.btn.light { border-color: var(--paper); color: var(--paper); }
-.btn.light:hover { background: var(--paper); color: var(--wine); }
-.btn.light.solid { background: var(--lotus); color: #fff; border-color: var(--lotus); box-shadow: 0 10px 28px rgba(217, 73, 125, 0.4); }
+.btn:hover { background: var(--lotus); color: #fff; }
+.btn.solid { background: var(--lotus); color: #fff; border-color: var(--lotus); box-shadow: 0 10px 28px rgba(217, 73, 125, 0.4); }
+.btn.solid:hover { background: #ff5f98; border-color: #ff5f98; box-shadow: 0 12px 32px rgba(217, 73, 125, 0.55); transform: translateY(-1px); }
+.btn.light { border-color: rgba(255, 244, 246, 0.85); color: #fff; }
+.btn.light:hover { background: rgba(255, 244, 246, 0.95); color: var(--wine); }
+.btn.light.solid { background: var(--lotus); color: #fff; border-color: var(--lotus); }
 .btn.light.solid:hover { background: #ff5f98; border-color: #ff5f98; color: #fff; }
 .btn.pill { border-radius: 999px; }
 .btn:disabled { opacity: 0.6; cursor: wait; }
