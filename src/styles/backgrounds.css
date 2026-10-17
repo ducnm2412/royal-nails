@@ -14,21 +14,21 @@
 
 /* Trang chủ */
 /* Hoa sen là hoạ tiết chính; hoa/màu nước chỉ làm điểm nhấn (bg-cover) */
-.bg-art { --art: url('/images/backgrounds/lotus-pattern.jpg'); --art-opacity: 0.5; }
-.bg-art::before { background-size: 560px auto; background-repeat: repeat; background-position: top left; }
+.bg-art { --art: url('/images/backgrounds/lotus-pattern.jpg'); --art-opacity: 0.22; }
+.bg-art::before { background-size: 760px auto; background-repeat: repeat; background-position: top left; }
 .bg-art.bg-cover::before { background-size: cover; background-repeat: no-repeat; background-position: center; }
-#services.bg-art { --art-opacity: 0.55; }
+#services.bg-art { --art-opacity: 0.22; }
 .look.bg-art { --art-fade: var(--porcelain); }
-.ritual.bg-art.bg-cover { --art: url('/images/backgrounds/blossoms.jpg'); --art-opacity: 0.4; }
-.visit.bg-art.bg-cover { --art: url('/images/backgrounds/watercolor-wash.jpg'); --art-opacity: 0.4; }
+.ritual.bg-art.bg-cover { --art: url('/images/backgrounds/blossoms.jpg'); --art-opacity: 0.25; }
+.visit.bg-art.bg-cover { --art: url('/images/backgrounds/watercolor-wash.jpg'); --art-opacity: 0.3; }
 
 /* Trang con */
-.about.bg-art.bg-cover { --art: url('/images/backgrounds/blossoms-corners.jpg'); --art-opacity: 0.45; }
-.svc-detail.bg-art:nth-of-type(odd) { --art-opacity: 0.3; }
+.about.bg-art.bg-cover { --art: url('/images/backgrounds/blossoms-corners.jpg'); --art-opacity: 0.3; }
+.svc-detail.bg-art:nth-of-type(odd) { --art-opacity: 0.14; }
 
 /* Footer: hoạ tiết hoa sen lặp nhẹ */
-footer.bg-art { --art-opacity: 0.28; }
+footer.bg-art { --art-opacity: 0.16; }
 
 @media (max-width: 700px) {
-  .bg-art::before { --art-opacity: 0.35; }
+  .bg-art::before { --art-opacity: 0.16; }
 }

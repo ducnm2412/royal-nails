@@ -39,11 +39,13 @@ export function Services() {
                 />
                 <span className="n" aria-hidden="true">{s.num}</span>
               </div>
-              <Link className="row" href={`/services#${s.slug}`}>
-                <h3>{s.name}</h3>
-                <span>{s.time}</span>
-              </Link>
-              <p>{s.text}</p>
+              <div className="body">
+                <Link className="row" href={`/services#${s.slug}`}>
+                  <h3>{s.name}</h3>
+                  <span>{s.time}</span>
+                </Link>
+                <p>{s.text}</p>
+              </div>
             </article>
           ))}
         </div>

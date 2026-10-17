@@ -29,7 +29,7 @@
 .svc-detail .ph[data-parallax] img { height: 118% !important; top: -9% !important; }
 .svc-detail .ph .n { position: absolute; top: 1rem; left: 1rem; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--paper); background: var(--wine); width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; }
 .svc-detail h2 { font-size: clamp(2rem, 3.2vw, 2.8rem); }
-.svc-detail .intro { color: var(--muted); margin-top: 0.7rem; max-width: 56ch; font-size: 0.95rem; }
+.svc-detail .intro { color: var(--ink); margin-top: 0.7rem; max-width: 56ch; font-size: 0.95rem; }
 .price-list { list-style: none; margin: 1.4rem 0 1.6rem; padding: 0; display: grid; }
 .price-list li { display: grid; grid-template-columns: auto 1fr auto auto; align-items: baseline; gap: 0.9rem; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
 .price-list .name { color: var(--ink); }
@@ -85,7 +85,7 @@
 .value { display: grid; grid-template-columns: 1.2rem 1fr; gap: 0.8rem; align-items: start; }
 .value .dot { color: var(--lotus); font-size: 1.2rem; margin-top: 0.15rem; }
 .value h3 { font-family: var(--display); font-size: 1.25rem; color: var(--wine); margin-bottom: 0.35rem; }
-.value p { color: var(--muted); font-size: 0.92rem; }
+.value p { color: var(--ink); font-size: 0.92rem; }
 .studio-strip { padding-block: 0 5rem; }
 .studio-strip .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; }
 .studio-strip figure { margin: 0; aspect-ratio: 1; overflow: hidden; background: var(--blush); }
@@ -101,7 +101,7 @@
 .contact-cards { padding-block: 3.5rem 1rem; }
 .contact-cards .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 .contact-cards .card { background: var(--porcelain); border: 1px solid var(--line); padding: 1.8rem; display: grid; gap: 0.9rem; align-content: start; }
-.contact-cards .card p { color: var(--muted); font-size: 0.92rem; }
+.contact-cards .card p { color: var(--ink); font-size: 0.92rem; }
 .big-link { font-family: var(--sans); font-weight: 600; font-size: clamp(1.5rem, 2.2vw, 1.9rem); color: var(--wine); text-decoration: none; font-variant-numeric: lining-nums tabular-nums; }
 .contact-cards .hours { border-top: 0; padding-top: 0; color: var(--ink); }
 .contact-cards .hours dt { color: var(--lotus); }
