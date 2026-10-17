@@ -25,7 +25,6 @@ export function PageMotion() {
         if (nav) {
           // Navbar luôn hiện: trong suốt trên hero, nền đêm khi đã cuộn
           const sync = () => nav.classList.toggle('is-solid', window.scrollY > 40);
-          nav.classList.toggle('on-hero', pathname === '/');
           sync();
           ScrollTrigger.create({ start: 0, end: 'max', onUpdate: sync, onLeaveBack: sync });
         }

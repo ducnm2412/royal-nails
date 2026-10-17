@@ -66,9 +66,6 @@ export function Header() {
         </nav>
 
         <div className="cta">
-          <Link className="btn solid" href={BOOK_PATH}>
-            Book
-          </Link>
           <button
             type="button"
             className={`burger${open ? ' is-open' : ''}`}
